@@ -1,50 +1,54 @@
+# =============================================================================
+# NODE.JS / FRONTEND (Next.js)
+# =============================================================================
 # Dependencies
 node_modules/
 .pnp
 .pnp.js
 
-# Next.js
+# Next.js build output
 .next/
 out/
 
-# Build
+# Production build
 dist/
 build/
 *.tsbuildinfo
 
-# Environment
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env*.local
-
-# Debug
+# Debug & Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# Testing
-coverage/
-.nyc_output/
+# =============================================================================
+# JAVA / BACKEND (Spring Boot & Maven)
+# =============================================================================
+# Compiled class files
+target/
+*.class
 
-# Turbo
-.turbo/
+# Log files
+*.log
 
-# OS
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-*~
+# Packaging
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
-# IDE
+# =============================================================================
+# IDE & SYSTEM (VS Code, IntelliJ, OS)
+# =============================================================================
 .idea/
+*.iml
 .vscode/
 *.sublime-*
+.DS_Store
+Thumbs.db
 
-# Misc
-*.log
-.cache/
+# Environment Files (Bảo mật thông tin nhạy cảm)
+.env
+.env*.local
