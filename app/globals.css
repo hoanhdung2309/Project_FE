@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Pitaya (Dragon Fruit Pink) – spec: #E91E63 ── */
+  --color-pitaya-50:  #fce4ec;
+  --color-pitaya-100: #f8bbd0;
+  --color-pitaya-200: #f48fb1;
+  --color-pitaya-500: #e91e63;
+  --color-pitaya-600: #c2185b;
+  --color-pitaya-700: #880e4f;
+
+  /* ── Cactus (Green) – spec: #27AE60 ── */
+  --color-cactus-100: #d5f5e3;
+  --color-cactus-500: #27ae60;
+  --color-cactus-600: #1e8449;
+
+  /* ── Dragon (Neutral) ── */
+  --color-dragon-base: #f8f9fa;
+  --color-dragon-dark: #1c1a2e;
+
+  /* ── Status colors ── */
+  --color-status-pending:    #f59e0b;
+  --color-status-confirmed:  #3b82f6;
+  --color-status-processing: #8b5cf6;
+  --color-status-shipped:    #06b6d4;
+  --color-status-delivered:  #27ae60;
+  --color-status-cancelled:  #ef4444;
+  --color-status-adjusted:   #f97316;
+
+  /* ── Font ── */
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-dragon-base);
+    color: var(--color-dragon-dark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Hide scrollbar for carousels */
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
