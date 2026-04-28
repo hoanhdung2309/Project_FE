@@ -1,39 +1,40 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 const SLIDES = [
   {
     id: 1,
-    eyebrow: "Cam kết",
-    headlineThin: "Chất Lượng",
-    headlineBold: "VietGAP",
-    headlineSub: "Chuẩn Quốc Tế",
-    sub: "Giá ưu đãi tự động theo số lượng sỉ. Giao hàng toàn quốc trong 24h.",
-    cta: "Xem bảng giá sỉ hôm nay",
+    eyebrow: "slide1.eyebrow",
+    headlineThin: "slide1.headlineThin",
+    headlineBold: "slide1.headlineBold",
+    headlineSub: "slide1.headlineSub",
+    sub: "slide1.sub",
+    cta: "slide1.cta",
     ctaHref: "/shop",
-    ctaSecondary: "Tìm hiểu thêm",
+    ctaSecondary: "slide1.ctaSecondary",
     ctaSecondaryHref: "/about",
     gradient: "from-[#fff0f7] via-pitaya-50 to-white",
     accentColor: "#e8196f",
-    tag: { text: "Lô mới về", color: "bg-cactus-500" },
+    tag: { text: "slide1.tag", color: "bg-cactus-500" },
     pattern: "red" as const,
   },
   {
     id: 2,
-    eyebrow: "Nông trại",
-    headlineThin: "Hàng Xuất Khẩu",
-    headlineBold: "GlobalGAP",
-    headlineSub: "Bình Thuận",
-    sub: "Tiêu chuẩn xuất khẩu Châu Âu & Nhật Bản. Tỷ lệ loại 1 trên 90%.",
-    cta: "Xem sản phẩm xuất khẩu",
+    eyebrow: "slide2.eyebrow",
+    headlineThin: "slide2.headlineThin",
+    headlineBold: "slide2.headlineBold",
+    headlineSub: "slide2.headlineSub",
+    sub: "slide2.sub",
+    cta: "slide2.cta",
     ctaHref: "/shop",
-    ctaSecondary: "Về chúng tôi",
+    ctaSecondary: "slide2.ctaSecondary",
     ctaSecondaryHref: "/about",
     gradient: "from-[#f0fff4] via-cactus-100 to-white",
     accentColor: "#22a85a",
-    tag: { text: "VietGAP", color: "bg-pitaya-500" },
+    tag: { text: "slide2.tag", color: "bg-pitaya-500" },
     pattern: "white" as const,
   },
 ];
@@ -104,6 +105,7 @@ function MacroFruitSVG({ pattern }: { pattern: "red" | "white" }) {
 }
 
 export default function Banner() {
+  const t = useTranslations("home.banner");
   const [current, setCurrent] = useState(0);
   const [fading, setFading] = useState(false);
 
@@ -141,29 +143,29 @@ export default function Banner() {
           <div className="flex flex-col justify-center p-8 sm:p-12 gap-5 relative z-10">
             {/* Tag */}
             <span className={`self-start ${slide.tag.color} text-white px-3 py-1 rounded-full text-xs font-bold tracking-wide shadow-sm`}>
-              {slide.tag.text}
+              {t(slide.tag.text)}
             </span>
 
             {/* Typography: thin eyebrow + mixed-weight headline */}
             <div>
               <p className="text-xs sm:text-sm font-light tracking-[0.22em] uppercase text-slate-400 mb-1">
-                {slide.eyebrow}
+                {t(slide.eyebrow)}
               </p>
               <h1 className="leading-none">
                 <span className="block text-3xl sm:text-4xl lg:text-5xl font-thin text-dragon-dark tracking-tight">
-                  {slide.headlineThin}
+                  {t(slide.headlineThin)}
                 </span>
                 <span className="block text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight"
                   style={{ color: slide.accentColor }}>
-                  {slide.headlineBold}
+                  {t(slide.headlineBold)}
                 </span>
                 <span className="block text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dragon-dark">
-                  {slide.headlineSub}
+                  {t(slide.headlineSub)}
                 </span>
               </h1>
             </div>
 
-            <p className="text-slate-500 text-sm sm:text-base max-w-sm leading-relaxed">{slide.sub}</p>
+            <p className="text-slate-500 text-sm sm:text-base max-w-sm leading-relaxed">{t(slide.sub)}</p>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-3">
@@ -171,13 +173,13 @@ export default function Banner() {
                 href={slide.ctaHref}
                 className="bg-pitaya-500 text-white font-bold px-6 py-3 rounded-full hover:bg-pitaya-600 active:scale-95 transition-all shadow-lg shadow-pitaya-200 text-sm"
               >
-                {slide.cta}
+                {t(slide.cta)}
               </Link>
               <Link
                 href={slide.ctaSecondaryHref}
                 className="border-2 border-slate-200 text-slate-600 font-semibold px-5 py-3 rounded-full hover:border-pitaya-300 hover:text-pitaya-600 transition-all text-sm"
               >
-                {slide.ctaSecondary}
+                {t(slide.ctaSecondary)}
               </Link>
             </div>
           </div>
@@ -198,12 +200,12 @@ export default function Banner() {
 
         {/* Prev / Next */}
         {[
-          { label: "Slide trước", action: prev, side: "left-3" },
-          { label: "Slide tiếp", action: next, side: "right-3" },
+          { label: "aria.prev", action: prev, side: "left-3" },
+          { label: "aria.next", action: next, side: "right-3" },
         ].map(({ label, action, side }) => (
           <button
             key={label}
-            aria-label={label}
+            aria-label={t(label)}
             onClick={action}
             className={`absolute ${side} top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white shadow-md border border-slate-100 flex items-center justify-center transition-all hover:shadow-lg z-20`}
           >

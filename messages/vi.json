@@ -1,0 +1,866 @@
+{
+  "common": {
+    "brand": "PITAYA",
+    "loading": "Đang tải...",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "back": "Quay lại",
+    "search": "Tìm kiếm",
+    "submit": "Gửi",
+    "refresh": "Làm mới",
+    "confirm": "Xác nhận",
+    "yes": "Có",
+    "no": "Không",
+    "close": "Đóng"
+  },
+  "header": {
+    "nav": {
+      "home": "Trang chủ",
+      "shop": "Sản phẩm",
+      "about": "Về chúng tôi",
+      "contact": "Liên hệ"
+    },
+    "cart": "Giỏ hàng",
+    "openMenu": "Mở menu",
+    "greeting": "Chào, {name}!",
+    "menu": {
+      "profile": "Hồ sơ cá nhân",
+      "orders": "Lịch sử đơn hàng",
+      "changePassword": "Đổi mật khẩu",
+      "admin": "Quản lý Admin",
+      "logout": "Đăng xuất"
+    },
+    "login": "Đăng nhập / Đăng ký",
+    "loggedOut": "Đã đăng xuất."
+  },
+  "footer": {
+    "tagline": "Đại lý Thanh Long Sỉ & Lẻ chính gốc VietGAP. Cam kết chất lượng, giá tốt nhất thị trường.",
+    "address": "123 Đường Thanh Long, Bình Thuận",
+    "quickLinks": "Liên kết nhanh",
+    "links": {
+      "about": "Về chúng tôi",
+      "wholesalePolicy": "Chính sách sỉ",
+      "faq": "Câu hỏi thường gặp",
+      "contact": "Liên hệ"
+    },
+    "social": "Kết nối xã hội",
+    "chatZalo": "Nhấn để Chat Zalo",
+    "subscribeTitle": "Nhận bảng giá sỉ",
+    "subscribeDesc": "Đăng ký để nhận bảng giá sỉ mới nhất mỗi ngày – không spam.",
+    "subscribeBtn": "Đăng ký nhận giá",
+    "subscribed": "Đăng ký thành công!",
+    "emailPlaceholder": "email@cua-ban.vn",
+    "copyright": "© 2025 PITAYA · Thanh Long VietGAP Bình Thuận",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản sử dụng"
+  },
+  "home": {
+    "trust": {
+      "vietgapLabel": "100% VietGAP",
+      "vietgapSub": "Kiểm định định kỳ",
+      "deliveryLabel": "Giao hàng trong 24h",
+      "deliverySub": "Toàn quốc",
+      "priceLabel": "Giá sỉ tận vườn",
+      "priceSub": "Tiết kiệm tối đa",
+      "supportLabel": "Hỗ trợ 24/7",
+      "supportSub": "Chat Zalo nhanh"
+    },
+    "banner": {
+      "slide1": {
+        "eyebrow": "Cam kết",
+        "headlineThin": "Chất Lượng",
+        "headlineBold": "VietGAP",
+        "headlineSub": "Chuẩn Quốc Tế",
+        "sub": "Giá ưu đãi tự động theo số lượng sỉ. Giao hàng toàn quốc trong 24h.",
+        "cta": "Xem bảng giá sỉ hôm nay",
+        "ctaSecondary": "Tìm hiểu thêm",
+        "tag": "Lô mới về"
+      },
+      "slide2": {
+        "eyebrow": "Nông trại",
+        "headlineThin": "Hàng Xuất Khẩu",
+        "headlineBold": "GlobalGAP",
+        "headlineSub": "Bình Thuận",
+        "sub": "Tiêu chuẩn xuất khẩu Châu Âu & Nhật Bản. Tỷ lệ loại 1 trên 90%.",
+        "cta": "Xem sản phẩm xuất khẩu",
+        "ctaSecondary": "Về chúng tôi",
+        "tag": "VietGAP"
+      },
+      "aria": {
+        "prev": "Slide trước",
+        "next": "Slide tiếp"
+      }
+    },
+    "categories": {
+      "eyebrow": "Danh mục",
+      "title": "Danh mục sản phẩm",
+      "subtitle": "Chọn loại thanh long phù hợp với nhu cầu của bạn",
+      "items": {
+        "red": {
+          "name": "Thanh Long Ruột Đỏ",
+          "desc": "Hàng VietGAP"
+        },
+        "white": {
+          "name": "Thanh Long Ruột Trắng",
+          "desc": "Xuất khẩu"
+        },
+        "export": {
+          "name": "Hàng Xuất Khẩu",
+          "desc": "Tiêu chuẩn quốc tế"
+        },
+        "discount": {
+          "name": "Hàng Dạt",
+          "desc": "Giá ưu đãi"
+        }
+      }
+    },
+    "featured": {
+      "eyebrow": "Hôm nay",
+      "title": "Sản phẩm nổi bật",
+      "subtitle": "Thanh long tươi ngon, giá sỉ ưu đãi",
+      "priceFrom": "Giá sỉ từ",
+      "quickAdd": "Thêm nhanh vào giỏ",
+      "viewAll": "Xem toàn bộ sản phẩm",
+      "aria": {
+        "scrollLeft": "Cuộn trái",
+        "scrollRight": "Cuộn phải"
+      },
+      "products": {
+        "p1": {
+          "name": "Thanh Long Ruột Đỏ L1",
+          "badge": "Lô mới",
+          "origin": "Bình Thuận"
+        },
+        "p2": {
+          "name": "Thanh Long Ruột Đỏ L2",
+          "badge": "Hot",
+          "origin": "Long An"
+        },
+        "p3": {
+          "name": "Thanh Long Ruột Trắng",
+          "badge": "Xuất khẩu",
+          "origin": "Bình Thuận"
+        },
+        "p4": {
+          "name": "Thanh Long Xuất Khẩu A1",
+          "badge": "Premium",
+          "origin": "VietGAP"
+        },
+        "p5": {
+          "name": "Hàng Dạt Thanh Long",
+          "badge": "Giá tốt",
+          "origin": "Mix vườn"
+        }
+      }
+    }
+  },
+  "shop": {
+    "eyebrow": "Shop",
+    "titlePrefix": "Danh sách",
+    "titleHighlight": "sản phẩm",
+    "subtitle": "Giá sỉ tự động cập nhật theo số lượng đặt hàng",
+    "cart": "Giỏ hàng",
+    "categoryAll": "Tất cả",
+    "categoryRedFlesh": "Ruột Đỏ",
+    "categoryWhiteFlesh": "Ruột Trắng",
+    "categoryExport": "Xuất Khẩu",
+    "categoryB": "Hàng Dạt",
+    "categoryProcessed": "Chế Biến",
+    "errorLoading": "Không thể tải sản phẩm. Vui lòng thử lại.",
+    "priceUpdating": "Đang cập nhật giá theo số lượng...",
+    "priceTierTitle": "Bảng giá theo số lượng",
+    "quantityLabel": "Số lượng:",
+    "priceLabel": "Giá",
+    "subtotal": "Thành tiền",
+    "enterQuantity": "Nhập số lượng",
+    "quickAdd": "Thêm nhanh vào giỏ",
+    "toastEnterQuantity": "Vui lòng nhập số lượng trước khi thêm vào giỏ.",
+    "toastAddedToCart": "Đã thêm {qty} {unit} \"{name}\" vào giỏ!"
+  },
+  "cart": {
+    "title": "Giỏ hàng",
+    "backToProducts": "Quay lại sản phẩm",
+    "itemCount": "{count} sản phẩm trong giỏ",
+    "clearCart": "Xóa giỏ",
+    "continueShopping": "Tiếp tục mua",
+    "calculatingPrice": "Đang tính giá theo số lượng...",
+    "removeFromCart": "Xóa khỏi giỏ",
+    "notesLabel": "Ghi chú đơn hàng",
+    "optional": "(tùy chọn)",
+    "notesPlaceholder": "Ví dụ: Giao giờ hành chính, gọi trước khi giao...",
+    "totalItems": "Tổng cộng <b>{count}</b> sản phẩm",
+    "creatingOrder": "Đang tạo đơn...",
+    "placeOrder": "Đặt hàng",
+    "loginToOrder": "Đăng nhập để đặt hàng",
+    "emptyTitle": "Giỏ hàng trống",
+    "emptyDescription": "Bạn chưa thêm sản phẩm nào. Khám phá sản phẩm thanh long VietGAP và thêm vào giỏ nhé!",
+    "viewProducts": "Xem sản phẩm",
+    "toastOrderCreated": "Đơn hàng đã được tạo. Mã đơn: {code}",
+    "toastCartCleared": "Đã xóa toàn bộ giỏ hàng.",
+    "toastItemRemoved": "Đã xóa khỏi giỏ."
+  },
+  "about": {
+    "heroEyebrow": "Pitaya Farm · Bình Thuận",
+    "heroTitle1": "Tâm Hồn",
+    "heroTitle2": "Nông Sản Việt",
+    "heroSubtitle": "Hơn cả một trái cây — đó là kết tinh của nắng gió, tình yêu đất mẹ và hơn 12 năm tâm huyết.",
+    "viewProducts": "Xem sản phẩm",
+    "ourStoryLink": "Câu chuyện của chúng tôi ↓",
+    "stat1": "Hecta canh tác",
+    "stat2": "Năm kinh nghiệm",
+    "stat3": "Hàng loại 1",
+    "stat4": "Thị trường xuất khẩu",
+    "storyEyebrow": "Câu chuyện của chúng tôi",
+    "storyTitle": "Từ Đất Mẹ Đến Bàn Ăn",
+    "storySubtitle": "Mỗi trái thanh long là một hành trình — rê chuột vào thẻ để đọc thêm.",
+    "hoverHint": "Hover để đọc thêm →",
+    "story1Title": "Vùng Nguyên Liệu",
+    "story1Short": "Tọa lạc tại vùng đất Bình Thuận đầy nắng, nơi có khí hậu và thổ nhưỡng lý tưởng nhất cho cây thanh long.",
+    "story1Full": "Tọa lạc tại vùng đất Bình Thuận đầy nắng, nơi có khí hậu và thổ nhưỡng lý tưởng nhất cho sự phát triển của cây thanh long. Với diện tích hơn 50 hecta, chúng tôi quản lý quy trình khép kín từ khâu chọn giống đến khi thu hoạch, đảm bảo mỗi trái thanh long đều mang trọn vẹn hương vị đặc trưng của vùng đất này.",
+    "story2Title": "Canh Tác Hữu Cơ",
+    "story2Short": "Áp dụng tiêu chuẩn canh tác nghiêm ngặt, hạn chế tối đa phân bón hóa học và thuốc trừ sâu.",
+    "story2Full": "Chúng tôi áp dụng các tiêu chuẩn canh tác nghiêm ngặt, hạn chế tối đa phân bón hóa học và thuốc trừ sâu. Toàn bộ nguồn nước tưới được lọc sạch và hệ thống tưới nhỏ giọt tự động giúp tiết kiệm tài nguyên, đồng thời cung cấp đúng lượng dinh dưỡng cần thiết cho từng giai đoạn sinh trưởng.",
+    "story3Title": "Chất Lượng Xuất Khẩu",
+    "story3Short": "Sản phẩm tuyển chọn kỹ lưỡng, đạt kích thước và độ đường chuẩn cho các thị trường khó tính.",
+    "story3Full": "Sản phẩm được tuyển chọn kỹ lưỡng, đạt kích thước và độ đường chuẩn để đáp ứng các thị trường khó tính nhất như Châu Âu, Nhật Bản và Hoa Kỳ. Tỷ lệ hàng đạt chuẩn loại 1 luôn trên 90%, được kiểm định bởi các tổ chức quốc tế độc lập.",
+    "qualityEyebrow": "Sản phẩm & Chất lượng",
+    "qualityTitle": "Đặc Tính Nổi Bật",
+    "quality1Label": "Độ đường Brix 18–22°",
+    "quality1Desc": "Ngọt tự nhiên, không chất bảo quản",
+    "quality2Label": "Không thuốc trừ sâu",
+    "quality2Desc": "Canh tác hữu cơ theo tiêu chuẩn GAP",
+    "quality3Label": "Truy xuất nguồn gốc",
+    "quality3Desc": "QR code từng lô hàng, minh bạch 100%",
+    "quality4Label": "Thu hoạch đúng độ chín",
+    "quality4Desc": "Kiểm soát thời điểm thu hoạch chuẩn xác",
+    "certEyebrow": "Cam kết chất lượng",
+    "certTitle": "Chứng Nhận Quốc Tế",
+    "certSubtitle": "Rê chuột vào từng chứng nhận để xem chi tiết.",
+    "cert1Sub": "Cấp 2023",
+    "cert1Detail": "Thực hành sản xuất nông nghiệp tốt tại Việt Nam – đảm bảo vệ sinh an toàn thực phẩm, truy xuất nguồn gốc và bảo vệ môi trường.",
+    "cert2Sub": "Cấp 2022",
+    "cert2Detail": "Tiêu chuẩn toàn cầu về quản lý nông trại, an toàn thực phẩm và truy xuất nguồn gốc. Bắt buộc để xuất khẩu vào EU và Nhật Bản.",
+    "cert3Sub": "Cấp 2023",
+    "cert3Detail": "Hệ thống phân tích mối nguy và kiểm soát điểm tới hạn trong chế biến – giảm thiểu rủi ro an toàn thực phẩm ở mọi công đoạn.",
+    "cert4Sub": "Cấp 2024",
+    "cert4Detail": "Tiêu chuẩn hệ thống quản lý an toàn thực phẩm quốc tế, tích hợp nguyên tắc HACCP và yêu cầu quản lý chất lượng toàn diện.",
+    "ctaTitle": "Sẵn sàng đặt hàng sỉ?",
+    "ctaSubtitle": "Giá tốt nhất theo từng mức sản lượng. Giao hàng toàn quốc và xuất khẩu.",
+    "ctaPrimary": "Xem bảng giá sỉ",
+    "ctaSecondary": "Liên hệ ngay"
+  },
+  "contact": {
+    "eyebrow": "Liên hệ",
+    "titlePrefix": "Liên Hệ Với",
+    "titleHighlight": "Pitaya",
+    "subtitle": "Thắc mắc về bảng giá sỉ hay chất lượng sản phẩm? Đội ngũ của chúng tôi phản hồi trong vòng <b>15 phút</b>.",
+    "shopInfoTitle": "Thông tin đại lý",
+    "quickConnect": "Kết nối nhanh",
+    "infoAddressLabel": "Địa chỉ nông trại",
+    "infoAddressValue": "123 Đường Thanh Long, Hàm Thuận Nam, Bình Thuận",
+    "infoHotlineLabel": "Hotline hỗ trợ sỉ",
+    "infoHotlineValue": "090 123 4567",
+    "infoEmailLabel": "Email liên hệ",
+    "infoEmailValue": "lienhe@pitaya.vn",
+    "infoHoursLabel": "Giờ làm việc",
+    "infoHoursValue": "07:00 – 21:00 · Thứ 2 – Chủ nhật",
+    "mapLocation": "Hàm Thuận Nam, Bình Thuận",
+    "openGoogleMaps": "Mở Google Maps ↗",
+    "interestRetail": "Mua thanh long lẻ",
+    "interestWholesale": "Đăng ký đại lý sỉ",
+    "interestExport": "Hợp tác xuất khẩu",
+    "interestQuality": "Phản ánh chất lượng",
+    "interestOther": "Khác",
+    "formTitle": "Để lại lời nhắn",
+    "nameLabel": "Họ và tên",
+    "namePlaceholder": "Nguyễn Văn A",
+    "phoneLabel": "Số điện thoại",
+    "phonePlaceholder": "090 123 4567",
+    "interestLabel": "Bạn quan tâm đến?",
+    "messageLabel": "Lời nhắn",
+    "messagePlaceholder": "Nội dung cần hỗ trợ, số lượng dự kiến mua, vùng giao hàng...",
+    "submit": "GỬI THÔNG TIN NGAY",
+    "submitting": "Đang gửi...",
+    "privacyNote": "Thông tin của bạn được bảo mật tuyệt đối. Không spam.",
+    "errorName": "Vui lòng nhập họ và tên.",
+    "errorPhone": "Vui lòng nhập số điện thoại.",
+    "errorMessage": "Vui lòng nhập lời nhắn.",
+    "successTitle": "Đã nhận thông tin!",
+    "successDescription": "Cảm ơn bạn đã liên hệ. Đội ngũ Pitaya sẽ phản hồi trong vòng<b>15 phút</b>.",
+    "sendAnother": "Gửi tin nhắn khác"
+  },
+  "auth": {
+    "login": {
+      "tagline": "Hệ thống quản lý đại lý Thanh Long",
+      "title": "Chào mừng trở lại",
+      "description": "Nhập thông tin tài khoản để tiếp tục",
+      "emailLabel": "Email",
+      "passwordLabel": "Mật khẩu",
+      "submit": "Đăng nhập",
+      "submitting": "Đang đăng nhập...",
+      "forgotPassword": "Quên mật khẩu?",
+      "noAccount": "Chưa có tài khoản?",
+      "registerNow": "Đăng ký ngay",
+      "toastSuccess": "Đăng nhập thành công!",
+      "toastError": "Tên đăng nhập hoặc mật khẩu không đúng.",
+      "copyright": "© 2025 PITAYA. Tất cả quyền được bảo lưu."
+    },
+    "register": {
+      "tagline": "Hệ thống quản lý đại lý Thanh Long",
+      "title": "Tạo tài khoản",
+      "description": "Điền thông tin bên dưới để đăng ký",
+      "displayNameLabel": "Họ và tên",
+      "displayNamePlaceholder": "Nguyễn Văn A",
+      "emailLabel": "Email",
+      "phoneLabel": "Số điện thoại",
+      "optional": "(tùy chọn)",
+      "passwordLabel": "Mật khẩu",
+      "passwordPlaceholder": "Tối thiểu 6 ký tự",
+      "confirmPasswordLabel": "Xác nhận mật khẩu",
+      "confirmPasswordPlaceholder": "Nhập lại mật khẩu",
+      "submit": "Đăng ký",
+      "submitting": "Đang đăng ký...",
+      "haveAccount": "Đã có tài khoản?",
+      "loginLink": "Đăng nhập",
+      "toastSuccess": "Đăng ký thành công! Chào mừng bạn đến với PITAYA.",
+      "toastError": "Đăng ký thất bại. Vui lòng thử lại.",
+      "copyright": "© 2025 PITAYA. Tất cả quyền được bảo lưu."
+    },
+    "forgotPassword": {
+      "tagline": "Hệ thống quản lý đại lý Thanh Long",
+      "requestTitle": "Quên mật khẩu",
+      "requestDescription": "Nhập email tài khoản. Chúng tôi sẽ gửi mã OTP để đặt lại mật khẩu.",
+      "emailLabel": "Email",
+      "sendOtp": "Gửi mã OTP",
+      "sendingOtp": "Đang gửi OTP...",
+      "backToLogin": "Quay lại đăng nhập",
+      "otpSentToast": "OTP đã được gửi đến email của bạn.",
+      "otpErrorToast": "Không thể gửi OTP. Vui lòng thử lại.",
+      "resetTitle": "Đặt lại mật khẩu",
+      "resetDescriptionPrefix": "Nhập mã OTP đã gửi đến",
+      "otpLabel": "Mã OTP",
+      "otpPlaceholder": "Nhập mã OTP",
+      "newPasswordLabel": "Mật khẩu mới",
+      "newPasswordPlaceholder": "Tối thiểu 6 ký tự",
+      "confirmPasswordLabel": "Xác nhận mật khẩu mới",
+      "confirmPasswordPlaceholder": "Nhập lại mật khẩu",
+      "resetSubmit": "Đặt lại mật khẩu",
+      "resetting": "Đang đặt lại...",
+      "otpInvalidToast": "Mã OTP không hợp lệ hoặc đã hết hạn.",
+      "resetSuccessToast": "Mật khẩu đã được đặt lại thành công!",
+      "doneTitle": "Đặt lại thành công!",
+      "doneDescription": "Mật khẩu của bạn đã được cập nhật.",
+      "doneHelper": "Bạn có thể đăng nhập bằng mật khẩu mới ngay bây giờ.",
+      "loginNow": "Đăng nhập ngay",
+      "copyright": "© 2025 PITAYA. Tất cả quyền được bảo lưu."
+    }
+  },
+  "account": {
+    "profile": {
+      "title": "Hồ sơ cá nhân",
+      "refresh": "Làm mới",
+      "errorBanner": "Không thể tải thông tin từ server. Hiển thị dữ liệu cache.",
+      "email": "Email",
+      "role": "Vai trò",
+      "roleAdmin": "Quản trị viên",
+      "roleCustomer": "Khách hàng",
+      "accountId": "ID tài khoản",
+      "changePassword": "Đổi mật khẩu",
+      "backToShop": "← Quay lại cửa hàng",
+      "copyright": "© 2025 PITAYA. Tất cả quyền được bảo lưu."
+    },
+    "changePassword": {
+      "title": "Đổi mật khẩu",
+      "description": "Cập nhật mật khẩu tài khoản của bạn",
+      "accountLabel": "Tài khoản",
+      "currentPasswordLabel": "Mật khẩu hiện tại",
+      "newPasswordLabel": "Mật khẩu mới",
+      "newPasswordPlaceholder": "Tối thiểu 6 ký tự",
+      "confirmPasswordLabel": "Xác nhận mật khẩu mới",
+      "confirmPasswordPlaceholder": "Nhập lại mật khẩu mới",
+      "submit": "Đổi mật khẩu",
+      "submitting": "Đang cập nhật...",
+      "backToShop": "Quay lại cửa hàng",
+      "toastSuccess": "Đổi mật khẩu thành công!",
+      "toastError": "Đổi mật khẩu thất bại. Vui lòng kiểm tra lại mật khẩu hiện tại.",
+      "doneTitle": "Đổi mật khẩu thành công",
+      "doneDescription": "Mật khẩu của bạn đã được cập nhật.",
+      "doneAccountPrefix": "Tài khoản",
+      "doneAccountSuffix": "đã được cập nhật mật khẩu mới.",
+      "copyright": "© 2025 PITAYA. Tất cả quyền được bảo lưu."
+    }
+  },
+  "admin": {
+    "layout": {
+      "brand": {
+        "tagline": "Quản trị Thanh Long",
+        "mobileTitle": "Quản trị"
+      },
+      "nav": {
+        "dashboard": "Tổng quan",
+        "orders": "Đơn hàng",
+        "inventory": "Tồn kho",
+        "products": "Sản phẩm",
+        "customers": "Khách hàng"
+      },
+      "chat": {
+        "newMessageFrom": "Tin nhắn mới từ {sender}",
+        "newMessagesCount": "{count} tin mới"
+      },
+      "toast": {
+        "loggedOut": "Đã đăng xuất."
+      },
+      "user": {
+        "fallback": "Quản trị viên"
+      },
+      "action": {
+        "logout": "Đăng xuất"
+      }
+    },
+    "dashboard": {
+      "eyebrow": "Tổng quan",
+      "title": "Bảng điều khiển",
+      "subtitle": "Cập nhật ngày {date}",
+      "stats": {
+        "ordersToday": "Đơn hôm nay",
+        "revenueToday": "Doanh thu hôm nay",
+        "pendingOrders": "Đơn chờ xử lý",
+        "totalOrders": "Tổng đơn"
+      },
+      "recentOrders": {
+        "title": "Đơn hàng gần đây",
+        "viewAll": "Xem tất cả",
+        "empty": "Chưa có đơn hàng nào.",
+        "customerLine": "{name} • {count} sản phẩm"
+      },
+      "quick": {
+        "title": "Thao tác nhanh",
+        "pendingOrders": {
+          "label": "Đơn chờ xác nhận",
+          "action": "Xử lý ngay"
+        },
+        "expiringBatches": {
+          "label": "Lô sắp hết hạn",
+          "action": "Xem tồn kho"
+        },
+        "fefoInventory": {
+          "label": "FEFO tồn kho",
+          "action": "Mở danh sách"
+        },
+        "manageOrders": {
+          "label": "Quản lý đơn hàng",
+          "action": "Đi đến đơn hàng"
+        }
+      }
+    },
+    "orders": {
+      "list": {
+        "eyebrow": "Đơn hàng",
+        "title": {
+          "prefix": "Quản lý",
+          "highlight": "đơn hàng"
+        },
+        "totalCount": "Tổng cộng {count} đơn",
+        "action": {
+          "refresh": "Làm mới",
+          "confirm": "Xác nhận",
+          "adjust": "Điều chỉnh"
+        },
+        "filter": {
+          "allStatuses": "Tất cả trạng thái"
+        },
+        "status": {
+          "Submitted": "Chờ xác nhận",
+          "Confirmed": "Đã xác nhận",
+          "Picking": "Đang soạn hàng",
+          "Adjusted": "Đã điều chỉnh",
+          "Delivering": "Đang giao",
+          "Delivered": "Đã giao",
+          "Cancelled": "Đã hủy"
+        },
+        "search": {
+          "placeholder": "Tìm theo mã đơn hoặc khách hàng..."
+        },
+        "error": {
+          "loadFailed": "Không thể tải danh sách đơn hàng."
+        },
+        "table": {
+          "orderCode": "Mã đơn",
+          "customer": "Khách hàng",
+          "itemCount": "Số sản phẩm",
+          "total": "Tổng tiền",
+          "status": "Trạng thái",
+          "createdAt": "Ngày tạo",
+          "actions": "Thao tác",
+          "itemCountValue": "{count} sản phẩm"
+        },
+        "empty": {
+          "noMatch": "Không có đơn hàng phù hợp."
+        },
+        "toast": {
+          "confirmed": "Đã xác nhận đơn hàng."
+        },
+        "pagination": {
+          "showing": "Hiển thị {shown} / {total} đơn"
+        }
+      },
+      "detail": {
+        "action": {
+          "back": "Quay lại",
+          "adjust": "Điều chỉnh đơn"
+        },
+        "notFound": {
+          "title": "Không tìm thấy đơn hàng",
+          "description": "Đơn hàng không tồn tại hoặc đã bị xóa."
+        },
+        "card": {
+          "orderTitle": "Đơn hàng {code}"
+        },
+        "field": {
+          "orderCode": "Mã đơn",
+          "customer": "Khách hàng",
+          "createdAt": "Ngày tạo",
+          "notes": "Ghi chú",
+          "totalPayment": "Tổng thanh toán"
+        },
+        "items": {
+          "title": "Sản phẩm trong đơn",
+          "empty": "Đơn hàng không có sản phẩm.",
+          "product": "Sản phẩm",
+          "unitPrice": "Đơn giá",
+          "quantity": "Số lượng",
+          "lineTotal": "Thành tiền",
+          "productFallback": "Sản phẩm",
+          "grandTotal": "Tổng cộng"
+        }
+      },
+      "adjust": {
+        "toast": {
+          "success": "Đã lưu điều chỉnh đơn hàng.",
+          "successDescription": "Đơn hàng đã được cập nhật thành công.",
+          "errorFallback": "Không thể lưu điều chỉnh."
+        },
+        "notFound": "Không tìm thấy đơn hàng.",
+        "action": {
+          "back": "Quay lại",
+          "cancel": "Hủy",
+          "previewSave": "Xem trước & Lưu"
+        },
+        "eyebrow": "Điều chỉnh đơn",
+        "title": {
+          "prefix": "Điều chỉnh",
+          "highlight": "đơn hàng"
+        },
+        "info": {
+          "userId": "Mã khách hàng",
+          "originalTotal": "Tổng tiền gốc",
+          "createdAt": "Ngày tạo",
+          "notes": "Ghi chú đơn"
+        },
+        "idempotency": {
+          "label": "Khóa idempotency",
+          "hint": "Tự động sinh để tránh trùng lặp."
+        },
+        "table": {
+          "title": "Sản phẩm trong đơn",
+          "product": "Sản phẩm",
+          "orderedQty": "SL đặt",
+          "actualQty": "SL thực tế",
+          "unitPrice": "Đơn giá",
+          "originalTotal": "Tiền gốc",
+          "adjustedTotal": "Tiền sau điều chỉnh",
+          "difference": "Chênh lệch",
+          "grandTotal": "Tổng cộng"
+        },
+        "diff": {
+          "unchanged": "Không đổi",
+          "noChange": "Không thay đổi"
+        },
+        "summary": {
+          "original": "Tổng gốc",
+          "adjusted": "Tổng sau điều chỉnh",
+          "customerOwes": "Khách phải trả thêm",
+          "customerRefund": "Hoàn trả khách"
+        },
+        "note": {
+          "label": "Ghi chú điều chỉnh",
+          "placeholder": "Lý do điều chỉnh, thay đổi..."
+        },
+        "warning": {
+          "noChanges": "Chưa có thay đổi nào."
+        },
+        "dialog": {
+          "title": "Xác nhận lưu điều chỉnh",
+          "description": "Vui lòng kiểm tra lại trước khi lưu.",
+          "differenceLabel": "Chênh lệch",
+          "notesLabel": "Ghi chú",
+          "review": "Quay lại chỉnh sửa",
+          "saving": "Đang lưu...",
+          "confirmSave": "Xác nhận lưu"
+        }
+      }
+    },
+    "products": {
+      "eyebrow": "Sản phẩm",
+      "title": {
+        "prefix": "Quản lý",
+        "highlight": "sản phẩm"
+      },
+      "totalCount": "Tổng cộng {count} sản phẩm",
+      "action": {
+        "refresh": "Làm mới",
+        "add": "Thêm sản phẩm",
+        "cancel": "Hủy",
+        "delete": "Xóa",
+        "deleting": "Đang xóa...",
+        "create": "Tạo",
+        "creating": "Đang tạo...",
+        "save": "Lưu",
+        "saving": "Đang lưu...",
+        "edit": "Sửa",
+        "updatePrice": "Cập nhật giá"
+      },
+      "search": {
+        "placeholder": "Tìm theo tên hoặc SKU..."
+      },
+      "error": {
+        "loadFailed": "Không thể tải danh sách sản phẩm."
+      },
+      "table": {
+        "nameSku": "Tên / SKU",
+        "unit": "Đơn vị",
+        "retailPrice": "Giá lẻ",
+        "status": "Trạng thái",
+        "createdAt": "Ngày tạo",
+        "actions": "Thao tác"
+      },
+      "empty": {
+        "noProducts": "Không có sản phẩm nào."
+      },
+      "status": {
+        "active": "Đang bán",
+        "inactive": "Ngừng bán"
+      },
+      "delete": {
+        "title": "Xóa sản phẩm",
+        "description": "Bạn có chắc muốn xóa \"{name}\"?"
+      },
+      "create": {
+        "title": "Tạo sản phẩm mới",
+        "description": "Nhập thông tin sản phẩm mới."
+      },
+      "edit": {
+        "title": "Chỉnh sửa sản phẩm",
+        "description": "Cập nhật thông tin sản phẩm."
+      },
+      "form": {
+        "nameLabel": "Tên sản phẩm",
+        "namePlaceholder": "Ví dụ: Thanh long ruột đỏ",
+        "descLabel": "Mô tả",
+        "optional": "(tùy chọn)",
+        "skuLabel": "SKU",
+        "retailPriceLabel": "Giá lẻ (₫)",
+        "unitLabel": "Đơn vị",
+        "activeLabel": "Đang bán"
+      },
+      "prices": {
+        "title": "Cập nhật bảng giá",
+        "description": "Quản lý bậc giá sỉ cho \"{name}\".",
+        "wholesaleLabel": "Bảng giá sỉ",
+        "addTier": "Thêm bậc giá",
+        "minQtyPlaceholder": "Số lượng tối thiểu",
+        "unitPricePlaceholder": "Đơn giá",
+        "tierNamePlaceholder": "Tên bậc (vd: Sỉ 1)",
+        "submit": "Lưu bảng giá"
+      },
+      "toast": {
+        "created": "Đã tạo sản phẩm.",
+        "updated": "Đã cập nhật sản phẩm.",
+        "deleted": "Đã xóa sản phẩm.",
+        "pricesUpdated": "Đã cập nhật bảng giá."
+      }
+    },
+    "inventory": {
+      "eyebrow": "Tồn kho",
+      "title": {
+        "prefix": "Quản lý",
+        "highlight": "tồn kho FEFO"
+      },
+      "subtitle": "Theo dõi các lô hàng theo hạn sử dụng.",
+      "action": {
+        "refresh": "Làm mới"
+      },
+      "stats": {
+        "totalBatches": "Tổng lô",
+        "totalQuantity": "Tổng SL: {qty}",
+        "expired": "Đã hết hạn",
+        "expiredHint": "Cần xử lý ngay",
+        "expiring": "Sắp hết hạn",
+        "expiringHint": "Ưu tiên bán trước",
+        "fresh": "Còn tươi",
+        "freshHint": "Còn nhiều thời gian"
+      },
+      "timeline": {
+        "heading": "Dòng thời gian FEFO",
+        "empty": "Chưa có lô hàng nào."
+      },
+      "batch": {
+        "received": "Nhập:",
+        "expires": "Hết hạn:",
+        "supplier": "NCC: {name}",
+        "actionDispose": "Xử lý ngay",
+        "actionPrioritize": "Ưu tiên bán"
+      },
+      "legend": {
+        "title": "Chú thích:",
+        "expired": "Đã hết hạn",
+        "expiring": "Sắp hết hạn",
+        "fresh": "Còn tươi"
+      }
+    },
+    "customers": {
+      "list": {
+        "eyebrow": "Khách hàng",
+        "title": {
+          "prefix": "Quản lý",
+          "highlight": "khách hàng"
+        },
+        "totalCount": "Tổng cộng {count} khách hàng",
+        "action": {
+          "refresh": "Làm mới"
+        },
+        "stats": {
+          "total": "Tổng khách",
+          "active": "Đang hoạt động",
+          "inactive": "Đã tắt",
+          "wholesaler": "Khách sỉ"
+        },
+        "search": {
+          "placeholder": "Tìm theo tên, email, SĐT..."
+        },
+        "roleFilter": {
+          "All": "Tất cả",
+          "Customer": "Khách lẻ",
+          "Wholesaler": "Khách sỉ",
+          "Admin": "Quản trị"
+        },
+        "error": {
+          "loadFailed": "Không thể tải danh sách khách hàng."
+        },
+        "table": {
+          "customer": "Khách hàng",
+          "phone": "SĐT",
+          "role": "Vai trò",
+          "creditLimit": "Hạn mức công nợ",
+          "status": "Trạng thái",
+          "createdAt": "Ngày tạo",
+          "detail": "Chi tiết"
+        },
+        "empty": {
+          "noMatch": "Không có khách hàng phù hợp."
+        },
+        "role": {
+          "Customer": "Khách lẻ",
+          "Wholesaler": "Khách sỉ",
+          "Admin": "Quản trị"
+        },
+        "status": {
+          "active": "Hoạt động",
+          "inactive": "Đã tắt"
+        },
+        "pagination": {
+          "showing": "Hiển thị {shown} / {total} khách hàng"
+        }
+      },
+      "detail": {
+        "action": {
+          "back": "Quay lại",
+          "cancel": "Hủy",
+          "saving": "Đang lưu...",
+          "update": "Cập nhật",
+          "confirm": "Xác nhận",
+          "resetting": "Đang đặt lại..."
+        },
+        "notFound": {
+          "title": "Không tìm thấy khách hàng",
+          "description": "Khách hàng không tồn tại hoặc đã bị xóa."
+        },
+        "info": {
+          "email": "Email",
+          "phone": "Số điện thoại",
+          "role": "Vai trò",
+          "creditLimit": "Hạn mức công nợ",
+          "createdAt": "Ngày tạo",
+          "phoneNotSet": "Chưa cập nhật",
+          "creditNotSet": "Chưa thiết lập"
+        },
+        "status": {
+          "active": "Đang hoạt động",
+          "inactive": "Đã tắt"
+        },
+        "role": {
+          "Customer": "Khách lẻ",
+          "Wholesaler": "Khách sỉ",
+          "Admin": "Quản trị"
+        },
+        "actions": {
+          "title": "Thao tác",
+          "changeRole": "Đổi phân quyền",
+          "disableOrCredit": "Tắt / Cập nhật công nợ",
+          "enableOrCredit": "Bật / Cập nhật công nợ",
+          "resetPassword": "Đặt lại mật khẩu"
+        },
+        "roleDialog": {
+          "title": "Đổi phân quyền",
+          "accountLabel": "Tài khoản:"
+        },
+        "statusDialog": {
+          "title": "Trạng thái & Hạn mức công nợ",
+          "accountLabel": "Tài khoản:",
+          "accountStatusLabel": "Trạng thái tài khoản",
+          "active": "Đang hoạt động",
+          "inactive": "Đã tắt",
+          "creditLabel": "Hạn mức công nợ (₫)",
+          "creditPlaceholder": "Ví dụ: 50000000",
+          "creditHint": "Để trống nếu không giới hạn.",
+          "saveChanges": "Lưu thay đổi"
+        },
+        "passwordDialog": {
+          "title": "Đặt lại mật khẩu",
+          "descriptionPrefix": "Đặt mật khẩu mới cho",
+          "descriptionSuffix": " mà không cần mật khẩu cũ."
+        },
+        "password": {
+          "newLabel": "Mật khẩu mới",
+          "newPlaceholder": "Tối thiểu 6 ký tự",
+          "confirmLabel": "Xác nhận mật khẩu",
+          "confirmPlaceholder": "Nhập lại mật khẩu",
+          "mismatch": "Mật khẩu không khớp"
+        },
+        "toast": {
+          "roleUpdated": "Đã cập nhật phân quyền.",
+          "statusUpdated": "Đã cập nhật trạng thái tài khoản.",
+          "passwordReset": "Đã đặt lại mật khẩu thành công."
+        }
+      }
+    }
+  },
+  "language": {
+    "switch": "Ngôn ngữ",
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "validation": {
+    "emailRequired": "Vui lòng nhập email",
+    "emailInvalid": "Email không hợp lệ",
+    "passwordRequired": "Vui lòng nhập mật khẩu",
+    "passwordMinLength": "Mật khẩu phải có ít nhất {min} ký tự",
+    "passwordMismatch": "Mật khẩu xác nhận không khớp",
+    "displayNameRequired": "Vui lòng nhập họ tên",
+    "currentPasswordRequired": "Vui lòng nhập mật khẩu hiện tại",
+    "newPasswordSame": "Mật khẩu mới phải khác mật khẩu hiện tại",
+    "otpRequired": "Vui lòng nhập mã OTP"
+  }
+}

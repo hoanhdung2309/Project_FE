@@ -3,7 +3,34 @@
     "allow": [
       "Bash(npm install:*)",
       "Bash(npm run:*)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "Bash(npx next:*)",
+      "Bash(npx tsc:*)",
+      "Bash(wc -l app/*.tsx app/**/*.tsx contexts/*.tsx components/*.tsx hooks/*.ts lib/*.ts types/*.ts)",
+      "Bash(wc -l app/admin/customers/page.tsx app/admin/customers/[id]/page.tsx app/admin/orders/page.tsx app/admin/orders/[id]/page.tsx app/admin/products/page.tsx app/admin/page.tsx app/account/profile/page.tsx app/account/page.tsx contexts/CartContext.tsx hooks/useSignalR.ts)",
+      "Bash(ls .eslintrc* eslint.config*)",
+      "Bash(mkdir -p \"[locale]\")",
+      "Bash(mv about:*)",
+      "Bash(node -e ':*)",
+      "Bash(curl -s http://localhost:3000/en)",
+      "Bash(curl -s http://localhost:3000/vi)",
+      "Bash(curl -sI http://localhost:3000/en)",
+      "Bash(curl -s http://localhost:3100/vi)",
+      "Bash(curl -sI http://localhost:3100/en)",
+      "Bash(kill bggjxln7m:*)",
+      "Bash(pkill -f \"next dev -p 3100\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3100/en)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3100/vi)",
+      "Bash(curl -s http://localhost:3100/en)",
+      "Bash(curl:*)",
+      "Bash(node -e 'const e=require\\(\"./messages/en.json\"\\); console.log\\(JSON.stringify\\(e.auth?.login||\"MISSING\",null,2\\)\\)')",
+      "Bash(lsof -i :3000 -sTCP:LISTEN)",
+      "Bash(node:*)",
+      "mcp__figma-desktop__get_metadata",
+      "mcp__figma-desktop__get_screenshot",
+      "Bash(unzip -l \"/Users/nanostore/Downloads/Web_Ecomerce_Dragon_Fruit.zip\")",
+      "Bash(mkdir -p \"/Users/nanostore/Documents/Project Myself/Project_Thanh_Long/FE/Project_FE/.tmp-ref\")",
+      "Bash(unzip -o \"/Users/nanostore/Downloads/Web_Ecomerce_Dragon_Fruit.zip\" -d \"/Users/nanostore/Documents/Project Myself/Project_Thanh_Long/FE/Project_FE/.tmp-ref/\")"
     ]
   }
 }

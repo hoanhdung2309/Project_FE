@@ -1,0 +1,260 @@
+---
+title: Design System & Figma Integration
+impact: HIGH
+impactDescription: Consistent UI and Figma-to-code handoff
+tags: design-system, figma, tailwind, tokens, ui-library
+---
+
+## Design System & Figma Integration
+
+**Impact: HIGH (keeps UI consistent with the design system and Figma source of truth)**
+
+---
+
+## 1. Token Definitions
+
+### Where tokens are defined
+
+- **Single source of truth:** `tooling/tailwind/theme.css`
+- Tokens are CSS custom properties in two blocks:
+  1. **`:root`** — raw values (hex, rem, etc.)
+  2. **`@theme inline`** — Tailwind v4 theme mapping (e.g. `--color-*` so Tailwind utilities like `bg-primary` work)
+
+### Token structure and format
+
+**Colors**
+
+- **Shadcn semantic:** `--background`, `--foreground`, `--primary`, `--primary-foreground`, `--card`, `--muted`, `--muted-foreground`, `--destructive`, `--border`, `--input`, `--ring`, `--chart-1`…`--chart-5`, `--sidebar*`.
+- **Design system palette:** `--color-heading`, `--color-neutral`, `--color-inverted`, `--color-pitch-green-100`…`900`, `--color-grey-500`.
+- In `@theme inline`, colors are exposed as `--color-<name>` so Tailwind uses them (e.g. `bg-primary` → `var(--primary)`).
+
+**Other tokens**
+
+- **Radius:** `--radius` (0.75rem); derived: `--radius-sm`, `--radius-md`, `--radius-lg`, `--radius-xl` in `@theme inline`.
+- **Shadows:** `--shadow-2xs`, `--shadow-xs`, `--shadow-sm`, `--shadow`, `--shadow-md`, `--shadow-lg`, `--shadow-xl`, `--shadow-2xl`.
+- **Typography:** `--font-sans: var(--font-geist-sans)`, `--font-mono: var(--font-geist-mono)`; letter-spacing: `--tracking-normal` and derived (tighter → widest).
+- **Spacing:** `--spacing: 0.25rem` (base unit).
+
+### Token transformation
+
+- No separate token build step. Tokens are CSS variables only; Tailwind v4 reads from `@theme inline`. When adding new design tokens from Figma, add them in `tooling/tailwind/theme.css` in both `:root` and `@theme inline` as needed.
+
+**Example (adding a token):**
+
+```css
+/* In :root */
+--color-my-token: #abc123;
+
+/* In @theme inline if Tailwind utility is needed */
+--color-my-token: var(--color-my-token, #abc123);
+```
+
+---
+
+## 2. Component Library
+
+### Where components live
+
+- **Package:** `packages/ui`
+- **Paths:**
+  - Components: `packages/ui/src/components/*.tsx` (e.g. `button.tsx`, `input.tsx`, `sidebar.tsx`)
+  - Primitives / composition: `packages/ui/src/ui/*.tsx`
+  - Icons: `packages/ui/src/icons/*.tsx`
+  - Utils: `packages/ui/src/lib/utils.ts` (`cn`), `packages/ui/src/lib/*.ts`
+  - Hooks: `packages/ui/src/hooks/*.tsx`
+  - Image: `@vtrip/image`
+
+### Component architecture
+
+- **Primitives:** Base UI (`@base-ui/react`) and Radix-style primitives where used.
+- **Variants:** `class-variance-authority` (`cva`) for variant/size combinations.
+- **Class merging:** `cn(...)` from `@vtrip/ui/lib/utils` (clsx + tailwind-merge).
+
+**Import aliases (from `components.json`):**
+
+- Components: `@vtrip/ui/components/<name>` (e.g. `@vtrip/ui/components/button`)
+- Utils: `@vtrip/ui/utils/cn` or `@vtrip/ui/lib/utils`
+- Hooks: `@vtrip/ui/hooks/<name>`
+- Icons: `@vtrip/ui/icons` (barrel; all icons and `IconProps` re-exported)
+- Image: `@vtrip/image`
+
+**Example (Button):**
+
+```tsx
+import { Button } from "@vtrip/ui/components/button"
+import { cn } from "@vtrip/ui/lib/utils"
+
+;<Button variant="default" size="sm">
+  Label
+</Button>
+```
+
+- Use semantic variants: `default`, `outline`, `secondary`, `ghost`, `destructive`, `link`.
+- Use size tokens from the component (e.g. `xs`, `sm`, `default`, `lg`, `icon`, `icon-sm`, `icon-lg`) rather than arbitrary Tailwind height/width when a variant exists.
+
+### Documentation
+
+- **No Storybook** in the repo. Prefer existing `@vtrip/ui` components; add new ones in `packages/ui/src/components/` following the same patterns (Base UI or primitive + `cva` + `cn`).
+
+---
+
+## 3. Frameworks & Libraries
+
+### UI and build
+
+- **Framework:** React 19
+- **Routing:** React Router v7 (React Router 7)
+- **Build:** Vite 7
+- **Bundler:** Vite (default)
+
+### Styling stack
+
+- **Tailwind CSS v4** (with `@tailwindcss/vite` and `@tailwindcss/postcss`)
+- **Shared theme:** `@vtrip/tailwind-config/theme` — imported in app CSS, not via `tailwind.config.js`
+- **Utilities:** `tailwind-merge`, `clsx` (via `cn()`)
+- **Component variants:** `class-variance-authority` (cva)
+- **Icons:** `lucide-react` + custom SVG icons in `packages/ui/src/icons/`
+
+### App entry and CSS
+
+- **Web apps:** `apps/{app_name}` (main app currently `apps/web`)
+- **Root:** `apps/{app_name}/app/root.tsx` (e.g. `apps/web/app/root.tsx`) — imports `./app.css`
+- **Global CSS:** `apps/{app_name}/app/app.css` (e.g. `apps/web/app/app.css`) — must `@import "@vtrip/tailwind-config/theme"` and `@source` the UI package for Tailwind content
+- When implementing a design, always confirm which `apps/{app_name}` you are modifying.
+
+---
+
+## 4. Asset Management
+
+### Storage and reference
+
+- **Static assets:** Always under `apps/{app_name}/public/assets/` (e.g. `apps/web/public/assets/`). Put favicon, images, icons, locales, and other app-specific files that are not part of `@vtrip/ui` inside `public/assets/` (e.g. `public/assets/favicon.ico`, `public/assets/images/`, `public/assets/icons/`, `public/assets/locales/`). Do not place static assets at the root of `public/`.
+- **Reference:** Use paths relative to site root with the `/assets/` prefix (e.g. `/assets/favicon.ico`, `/assets/images/hero.png`, `/assets/icons/logo.svg`). For CDN, `vite.config.ts` sets `base: process.env.VITE_CDN_ASSET_URL` — use that env when deploying to a CDN so asset URLs are correct.
+- **i18n:** Public paths like `assets`, `build`, `icons`, `images`, `_react-router`, `api` are excluded from i18n routing (see `packages/lib/src/i18n/config.ts`).
+
+### Optimization and CDN
+
+- Vite handles bundling and hashing for non-public assets. No custom asset optimization config was found; rely on Vite defaults.
+- **CDN:** Set `VITE_CDN_ASSET_URL` for production base URL when assets are served from a CDN.
+
+---
+
+## 5. Icon System
+
+### Location
+
+- **Custom icons:** `packages/ui/src/icons/*.tsx` (e.g. `alert-triangle.tsx`, `vinclub.tsx`).
+- **Library:** `lucide-react` for standard icons (see `components.json` `iconLibrary: "lucide"`).
+
+### Usage and API
+
+- **Import path:** `@vtrip/ui/icons` — all custom icons and `IconProps` are re-exported from `packages/ui/src/icons/index.tsx`. Import icons and the type from the barrel:
+
+```ts
+interface IconProps extends React.ComponentPropsWithRef<"svg"> {
+  children?: never
+  color?: string
+}
+```
+
+- **Pattern:** Each icon file exports a single component named `PascalCaseIcon` (e.g. `AlertTriangleIcon`). Default `color` is `"currentColor"`. Forward SVG props and `className` for size/color when using with Tailwind.
+
+**Example:**
+
+```tsx
+import type { IconProps } from "@vtrip/ui/icons"
+import { AlertTriangleIcon } from "@vtrip/ui/icons"
+
+;<AlertTriangleIcon className="text-destructive size-4" />
+```
+
+### Naming convention
+
+- File: `kebab-case.tsx` (e.g. `alert-triangle.tsx`).
+- Component and export: `PascalCaseIcon` (e.g. `AlertTriangleIcon`).
+- Prefer existing icons from `@vtrip/ui/icons` or `lucide-react`; add new custom icons in `packages/ui/src/icons/` with the same pattern (and they will be re-exported from the barrel).
+
+### Large or complex SVG icons
+
+- **SVG with many paths or large markup:** Do not add these as React components in `packages/ui/src/icons/`. Put the `.svg` file in the app’s **`public/assets/`** (e.g. `apps/{app_name}/public/assets/icons/` or `apps/{app_name}/public/assets/icons/`) and reference it by URL (e.g. `<img src="/assets/icons/name.svg" />` or as background/embed). This keeps the UI package bundle small and avoids huge inline SVG in JS.
+- **When unsure** (e.g. whether an icon is “large” or app-specific): **Ask the user** instead of guessing. Do not invent a location or pattern; clarify where the asset should live and whether it should be shared across apps or only in one app.
+
+---
+
+## 6. Styling Approach
+
+### Methodology
+
+- **Utility-first:** Tailwind v4 with shared theme. No CSS Modules or Styled Components; use Tailwind classes and `cn()` for composition.
+- **Theme consumption:** Tokens are in `tooling/tailwind/theme.css`. Apps import it via:
+
+  ```css
+  @import "tailwindcss";
+  @import "@vtrip/tailwind-config/theme";
+  ```
+
+- **Tailwind content:** App CSS uses `@source "../../../packages/ui/src/**/*.{ts,tsx}"` so classes used in `packages/ui` are generated. Do not add a separate `content` array in a config file; Tailwind v4 uses `@source` in CSS.
+
+### Global styles
+
+- **App entry:** `apps/web/app/app.css`
+- **Base layer:** `@layer base` in that file sets `:root { --font-geist-sans: "Inter Variable"; }`, `* { @apply border-border; }`, `body { letter-spacing: var(--tracking-normal); }`.
+- **Font:** `@import "@fontsource-variable/inter";` (Inter Variable).
+- **Dark/light:** Custom variants: `@custom-variant dark (&:where(.dark, .dark *));` (and `light`, `auto`). Use `dark:` prefixed utilities for dark mode.
+
+### Responsive design
+
+- Use Tailwind breakpoint prefixes: `sm:`, `md:`, `lg:`, etc. Container uses `--theme(--breakpoint-sm)` in media queries:
+
+  ```css
+  @utility container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+    @media (width >= --theme(--breakpoint-sm)) {
+      max-width: none;
+    }
+    @media (width >= 1400px) {
+      max-width: 1400px;
+    }
+  }
+  ```
+
+- Prefer semantic tokens (e.g. `bg-primary`, `text-muted-foreground`, `rounded-lg`) over raw hex or arbitrary values when matching Figma.
+
+---
+
+## 7. Project Structure
+
+### Monorepo layout
+
+- **Tooling:** pnpm workspaces, Turbo.
+- **Apps:** `apps/web` (main React Router app), `apps/_templates` (template app).
+- **Packages:**
+  - `packages/ui` — design system components and icons
+  - `packages/blocks` — layouts, shared, domains (uses `@vtrip/ui`)
+  - `packages/core`, `packages/lib`, `packages/api`, `packages/utils`, `packages/env`
+- **Tooling packages:** `tooling/tailwind` (theme + PostCSS), `tooling/eslint`, `tooling/prettier`, `tooling/typescript`
+
+### Feature organization
+
+- **Web app routes:** Under `apps/web/app/routes/` (file-based routing with React Router).
+- **Shared UI:** Always in `packages/ui`; app and `packages/blocks` depend on `@vtrip/ui` and `@vtrip/tailwind-config`.
+- When implementing features from Figma, always confirm which app under `apps/{app_name}` (e.g. `apps/web`, `apps/hotel`) the change targets and keep routes and assets scoped to that app.
+- **Adding components:** Add to `packages/ui`; add new shadcn components via `pnpm ui-add` (runs shadcn CLI in the UI package).
+
+---
+
+## Figma MCP Integration Checklist
+
+When turning Figma designs into code:
+
+1. **Colors:** Map Figma fills to tokens from `tooling/tailwind/theme.css` (e.g. primary → `primary`, pitch green → `pitch-green-500`, grey → `muted-foreground` or `grey-500`). Use Tailwind classes like `bg-primary`, `text-muted-foreground`.
+2. **Typography:** Use `font-sans` (Inter); headings use `text-foreground` or `text-heading` if you add that alias. Prefer `text-sm`, `text-base`, `font-medium`, etc., and existing type scale.
+3. **Spacing:** Use Tailwind spacing scale (e.g. `p-4`, `gap-2`, `space-y-4`). Base unit is 0.25rem; avoid arbitrary values unless necessary.
+4. **Radius:** Use `rounded-lg`, `rounded-md`, or `var(--radius)`-based utilities to match `--radius` and derived radii.
+5. **Shadows:** Use `shadow-sm`, `shadow`, `shadow-md`, etc., which map to theme shadow variables.
+6. **Components:** Prefer `@vtrip/ui` components (Button, Input, Card, etc.) and their variants; use `cn()` to merge layout/sizing classes.
+7. **Icons:** Use `@vtrip/ui/icons` (barrel) or `lucide-react`; keep `IconProps` and naming (PascalCaseIcon, kebab-case file).
+8. **Layout:** Use flex/grid utilities and the existing `container` utility where appropriate; use `md:`/`lg:` for responsive behavior.
+9. **New tokens:** If Figma introduces a new color or spacing, add it to `tooling/tailwind/theme.css` in both `:root` and `@theme inline` and use the corresponding Tailwind class in components.
+10. **Public assets:** Always place static assets (images, icons, favicon, etc.) under `public/assets/` (e.g. `public/assets/images/`, `public/assets/icons/`) and reference with `/assets/...` (e.g. `/assets/images/hero.png`).

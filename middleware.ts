@@ -1,30 +1,48 @@
+import createIntlMiddleware from "next-intl/middleware";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { routing } from "./i18n/routing";
 
-export function middleware(request: NextRequest) {
+const intlMiddleware = createIntlMiddleware(routing);
+
+function stripLocale(pathname: string): string {
+  for (const locale of routing.locales) {
+    if (pathname === `/${locale}`) return "/";
+    if (pathname.startsWith(`/${locale}/`)) return pathname.slice(locale.length + 1);
+  }
+  return pathname;
+}
+
+export default function middleware(request: NextRequest) {
   const token = request.cookies.get("access_token")?.value;
-  const { pathname } = request.nextUrl;
+  const pathWithoutLocale = stripLocale(request.nextUrl.pathname);
 
-  const isAdminRoute = pathname.startsWith("/admin");
-  const isAccountRoute = pathname.startsWith("/account");
-  const isLoginRoute = pathname === "/login";
+  const isAdminRoute = pathWithoutLocale.startsWith("/admin");
+  const isAccountRoute = pathWithoutLocale.startsWith("/account");
+  const isLoginRoute = pathWithoutLocale === "/login";
 
-  /* Redirect unauthenticated users away from protected routes */
   if ((isAdminRoute || isAccountRoute) && !token) {
-    const loginUrl = request.nextUrl.clone();
-    loginUrl.pathname = "/login";
-    loginUrl.searchParams.set("from", pathname);
-    return NextResponse.redirect(loginUrl);
+    const url = request.nextUrl.clone();
+    const locale = request.nextUrl.pathname.split("/")[1] ?? routing.defaultLocale;
+    const safeLocale = routing.locales.includes(locale as (typeof routing.locales)[number])
+      ? locale
+      : routing.defaultLocale;
+    url.pathname = `/${safeLocale}/login`;
+    url.searchParams.set("from", pathWithoutLocale);
+    return NextResponse.redirect(url);
   }
 
-  /* Redirect authenticated users away from login */
   if (isLoginRoute && token) {
-    return NextResponse.redirect(new URL("/", request.url));
+    const locale = request.nextUrl.pathname.split("/")[1] ?? routing.defaultLocale;
+    const safeLocale = routing.locales.includes(locale as (typeof routing.locales)[number])
+      ? locale
+      : routing.defaultLocale;
+    return NextResponse.redirect(new URL(`/${safeLocale}`, request.url));
   }
 
-  return NextResponse.next();
+  return intlMiddleware(request);
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/account/:path*", "/login"],
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };

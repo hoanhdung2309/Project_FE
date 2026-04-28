@@ -1,9 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 const CATEGORIES = [
   {
-    name: "Thanh Long Ruột Đỏ",
-    desc: "Hàng VietGAP",
+    name: "items.red.name",
+    desc: "items.red.desc",
     href: "/shop",
     bg: "bg-gradient-to-br from-pitaya-50 to-white",
     shadowColor: "rgba(232, 25, 111, 0.18)",
@@ -30,8 +32,8 @@ const CATEGORIES = [
     ),
   },
   {
-    name: "Thanh Long Ruột Trắng",
-    desc: "Xuất khẩu",
+    name: "items.white.name",
+    desc: "items.white.desc",
     href: "/shop",
     bg: "bg-gradient-to-br from-slate-50 to-white",
     shadowColor: "rgba(100, 116, 139, 0.15)",
@@ -54,8 +56,8 @@ const CATEGORIES = [
     ),
   },
   {
-    name: "Hàng Xuất Khẩu",
-    desc: "Tiêu chuẩn quốc tế",
+    name: "items.export.name",
+    desc: "items.export.desc",
     href: "/shop",
     bg: "bg-gradient-to-br from-cactus-100 to-white",
     shadowColor: "rgba(34, 168, 90, 0.18)",
@@ -75,8 +77,8 @@ const CATEGORIES = [
     ),
   },
   {
-    name: "Hàng Dạt",
-    desc: "Giá ưu đãi",
+    name: "items.discount.name",
+    desc: "items.discount.desc",
     href: "/shop",
     bg: "bg-gradient-to-br from-amber-50 to-white",
     shadowColor: "rgba(251, 191, 36, 0.2)",
@@ -97,12 +99,13 @@ const CATEGORIES = [
 ];
 
 export default function CategorySection() {
+  const t = useTranslations("home.categories");
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
       <div className="text-center mb-8 sm:mb-10">
-        <p className="text-xs font-bold uppercase tracking-widest text-pitaya-500 mb-1">Danh mục</p>
-        <h2 className="text-2xl sm:text-3xl font-bold text-dragon-dark">Danh mục sản phẩm</h2>
-        <p className="text-slate-500 mt-2 text-sm">Chọn loại thanh long phù hợp với nhu cầu của bạn</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-pitaya-500 mb-1">{t("eyebrow")}</p>
+        <h2 className="text-2xl sm:text-3xl font-bold text-dragon-dark">{t("title")}</h2>
+        <p className="text-slate-500 mt-2 text-sm">{t("subtitle")}</p>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
@@ -128,8 +131,8 @@ export default function CategorySection() {
               {cat.icon}
             </div>
             <div>
-              <p className="font-bold text-dragon-dark text-sm sm:text-base leading-snug">{cat.name}</p>
-              <p className="text-xs text-slate-400 mt-0.5">{cat.desc}</p>
+              <p className="font-bold text-dragon-dark text-sm sm:text-base leading-snug">{t(cat.name)}</p>
+              <p className="text-xs text-slate-400 mt-0.5">{t(cat.desc)}</p>
             </div>
           </a>
         ))}

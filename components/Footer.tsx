@@ -1,14 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-
-const QUICK_LINKS = [
-  { label: "Về chúng tôi", href: "/about" },
-  { label: "Chính sách sỉ", href: "#" },
-  { label: "Câu hỏi thường gặp", href: "#" },
-  { label: "Liên hệ", href: "#contact" },
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 const SOCIAL = [
   {
@@ -41,8 +35,16 @@ const SOCIAL = [
 ];
 
 export default function Footer() {
+  const t = useTranslations("footer");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+
+  const quickLinks = [
+    { label: t("links.about"), href: "/about" as const },
+    { label: t("links.wholesalePolicy"), href: "#" as const },
+    { label: t("links.faq"), href: "#" as const },
+    { label: t("links.contact"), href: "#contact" as const },
+  ];
 
   function handleSubscribe(e: React.FormEvent) {
     e.preventDefault();
@@ -91,13 +93,11 @@ export default function Footer() {
               </span>
               <span className="text-xl font-black text-pitaya-400 tracking-tight">PITAYA</span>
             </div>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Đại lý Thanh Long Sỉ & Lẻ chính gốc VietGAP. Cam kết chất lượng, giá tốt nhất thị trường.
-            </p>
+            <p className="text-sm text-slate-400 leading-relaxed">{t("tagline")}</p>
             <div className="space-y-1.5 text-sm">
               <p className="flex items-center gap-2 text-slate-400">
                 <span className="text-pitaya-400">📍</span>
-                123 Đường Thanh Long, Bình Thuận
+                {t("address")}
               </p>
               <p className="flex items-center gap-2">
                 <span className="text-pitaya-400">📞</span>
@@ -112,8 +112,8 @@ export default function Footer() {
 
           {/* Quick links */}
           <div className="space-y-3">
-            <h4 className="font-bold text-white text-sm uppercase tracking-wider mb-4">Liên kết nhanh</h4>
-            {QUICK_LINKS.map((link) => (
+            <h4 className="font-bold text-white text-sm uppercase tracking-wider mb-4">{t("quickLinks")}</h4>
+            {quickLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
@@ -126,7 +126,7 @@ export default function Footer() {
 
           {/* Social */}
           <div className="space-y-4">
-            <h4 className="font-bold text-white text-sm uppercase tracking-wider mb-4">Kết nối xã hội</h4>
+            <h4 className="font-bold text-white text-sm uppercase tracking-wider mb-4">{t("social")}</h4>
             <div className="flex gap-3">
               {SOCIAL.map((s) => (
                 <a
@@ -146,22 +146,20 @@ export default function Footer() {
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
                 <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
               </svg>
-              Nhấn để Chat Zalo
+              {t("chatZalo")}
             </a>
           </div>
 
           {/* Email subscription */}
           <div className="space-y-4">
-            <h4 className="font-bold text-white text-sm uppercase tracking-wider">Nhận bảng giá sỉ</h4>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Đăng ký để nhận bảng giá sỉ mới nhất mỗi ngày – không spam.
-            </p>
+            <h4 className="font-bold text-white text-sm uppercase tracking-wider">{t("subscribeTitle")}</h4>
+            <p className="text-xs text-slate-400 leading-relaxed">{t("subscribeDesc")}</p>
             {submitted ? (
               <div className="flex items-center gap-2 text-cactus-400 text-sm font-semibold bg-cactus-500/10 border border-cactus-500/20 rounded-xl px-3 py-2.5">
                 <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                Đăng ký thành công!
+                {t("subscribed")}
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="space-y-2">
@@ -169,7 +167,7 @@ export default function Footer() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="email@cua-ban.vn"
+                  placeholder={t("emailPlaceholder")}
                   required
                   className="w-full bg-white/8 border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-pitaya-500 focus:bg-white/12 transition-all"
                   style={{ background: "rgba(255,255,255,0.06)" }}
@@ -178,7 +176,7 @@ export default function Footer() {
                   type="submit"
                   className="w-full bg-pitaya-500 hover:bg-pitaya-600 text-white font-bold py-2.5 rounded-xl text-sm transition-all active:scale-95"
                 >
-                  Đăng ký nhận giá
+                  {t("subscribeBtn")}
                 </button>
               </form>
             )}
@@ -187,10 +185,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-          <p>© 2025 PITAYA · Thanh Long VietGAP Bình Thuận</p>
+          <p>{t("copyright")}</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-slate-300 transition-colors">Chính sách bảo mật</a>
-            <a href="#" className="hover:text-slate-300 transition-colors">Điều khoản sử dụng</a>
+            <a href="#" className="hover:text-slate-300 transition-colors">{t("privacy")}</a>
+            <a href="#" className="hover:text-slate-300 transition-colors">{t("terms")}</a>
           </div>
         </div>
       </div>

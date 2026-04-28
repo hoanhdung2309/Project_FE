@@ -1,0 +1,866 @@
+{
+  "common": {
+    "brand": "PITAYA",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "search": "Search",
+    "submit": "Submit",
+    "refresh": "Refresh",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close"
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "shop": "Shop",
+      "about": "About us",
+      "contact": "Contact"
+    },
+    "cart": "Cart",
+    "openMenu": "Open menu",
+    "greeting": "Hi, {name}!",
+    "menu": {
+      "profile": "My profile",
+      "orders": "Order history",
+      "changePassword": "Change password",
+      "admin": "Admin panel",
+      "logout": "Log out"
+    },
+    "login": "Sign in / Sign up",
+    "loggedOut": "Logged out."
+  },
+  "footer": {
+    "tagline": "Official VietGAP dragon fruit wholesaler & retailer. Quality guaranteed, best market prices.",
+    "address": "123 Thanh Long St, Binh Thuan",
+    "quickLinks": "Quick links",
+    "links": {
+      "about": "About us",
+      "wholesalePolicy": "Wholesale policy",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "social": "Social",
+    "chatZalo": "Click to chat on Zalo",
+    "subscribeTitle": "Get wholesale prices",
+    "subscribeDesc": "Subscribe to receive our latest wholesale prices daily — no spam.",
+    "subscribeBtn": "Subscribe",
+    "subscribed": "Subscribed successfully!",
+    "emailPlaceholder": "your-email@example.com",
+    "copyright": "© 2025 PITAYA · VietGAP dragon fruit from Binh Thuan",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use"
+  },
+  "home": {
+    "trust": {
+      "vietgapLabel": "100% VietGAP",
+      "vietgapSub": "Regular inspections",
+      "deliveryLabel": "24h delivery",
+      "deliverySub": "Nationwide",
+      "priceLabel": "Farm-direct wholesale",
+      "priceSub": "Maximum savings",
+      "supportLabel": "24/7 support",
+      "supportSub": "Fast Zalo chat"
+    },
+    "banner": {
+      "slide1": {
+        "eyebrow": "Commitment",
+        "headlineThin": "Quality",
+        "headlineBold": "VietGAP",
+        "headlineSub": "International Standard",
+        "sub": "Automatic wholesale discounts by quantity. Nationwide delivery within 24h.",
+        "cta": "View today's wholesale prices",
+        "ctaSecondary": "Learn more",
+        "tag": "New batch"
+      },
+      "slide2": {
+        "eyebrow": "Farm",
+        "headlineThin": "Export Grade",
+        "headlineBold": "GlobalGAP",
+        "headlineSub": "Binh Thuan",
+        "sub": "European & Japanese export standards. Grade-1 ratio over 90%.",
+        "cta": "View export products",
+        "ctaSecondary": "About us",
+        "tag": "VietGAP"
+      },
+      "aria": {
+        "prev": "Previous slide",
+        "next": "Next slide"
+      }
+    },
+    "categories": {
+      "eyebrow": "Categories",
+      "title": "Product categories",
+      "subtitle": "Choose the dragon fruit type that fits your needs",
+      "items": {
+        "red": {
+          "name": "Red-flesh Dragon Fruit",
+          "desc": "VietGAP certified"
+        },
+        "white": {
+          "name": "White-flesh Dragon Fruit",
+          "desc": "Export grade"
+        },
+        "export": {
+          "name": "Export Products",
+          "desc": "International standards"
+        },
+        "discount": {
+          "name": "Discount Lot",
+          "desc": "Special price"
+        }
+      }
+    },
+    "featured": {
+      "eyebrow": "Today",
+      "title": "Featured products",
+      "subtitle": "Fresh dragon fruit at great wholesale prices",
+      "priceFrom": "Wholesale from",
+      "quickAdd": "Quick add to cart",
+      "viewAll": "View all products",
+      "aria": {
+        "scrollLeft": "Scroll left",
+        "scrollRight": "Scroll right"
+      },
+      "products": {
+        "p1": {
+          "name": "Red Dragon Fruit L1",
+          "badge": "New batch",
+          "origin": "Binh Thuan"
+        },
+        "p2": {
+          "name": "Red Dragon Fruit L2",
+          "badge": "Hot",
+          "origin": "Long An"
+        },
+        "p3": {
+          "name": "White Dragon Fruit",
+          "badge": "Export",
+          "origin": "Binh Thuan"
+        },
+        "p4": {
+          "name": "Export Dragon Fruit A1",
+          "badge": "Premium",
+          "origin": "VietGAP"
+        },
+        "p5": {
+          "name": "Dragon Fruit Discount Lot",
+          "badge": "Great price",
+          "origin": "Mixed farms"
+        }
+      }
+    }
+  },
+  "shop": {
+    "eyebrow": "Shop",
+    "titlePrefix": "Product",
+    "titleHighlight": "catalog",
+    "subtitle": "Wholesale prices update automatically based on order quantity",
+    "cart": "Cart",
+    "categoryAll": "All",
+    "categoryRedFlesh": "Red Flesh",
+    "categoryWhiteFlesh": "White Flesh",
+    "categoryExport": "Export",
+    "categoryB": "B-Grade",
+    "categoryProcessed": "Processed",
+    "errorLoading": "Unable to load products. Please try again.",
+    "priceUpdating": "Updating price by quantity...",
+    "priceTierTitle": "Volume price table",
+    "quantityLabel": "Quantity:",
+    "priceLabel": "Price",
+    "subtotal": "Subtotal",
+    "enterQuantity": "Enter quantity",
+    "quickAdd": "Quick add to cart",
+    "toastEnterQuantity": "Please enter a quantity before adding to cart.",
+    "toastAddedToCart": "Added {qty} {unit} of \"{name}\" to cart!"
+  },
+  "cart": {
+    "title": "Shopping cart",
+    "backToProducts": "Back to products",
+    "itemCount": "{count} items in cart",
+    "clearCart": "Clear cart",
+    "continueShopping": "Continue shopping",
+    "calculatingPrice": "Calculating price by quantity...",
+    "removeFromCart": "Remove from cart",
+    "notesLabel": "Order notes",
+    "optional": "(optional)",
+    "notesPlaceholder": "E.g. Deliver during business hours, call before delivery...",
+    "totalItems": "Total <b>{count}</b> items",
+    "creatingOrder": "Creating order...",
+    "placeOrder": "Place order",
+    "loginToOrder": "Log in to order",
+    "emptyTitle": "Your cart is empty",
+    "emptyDescription": "You haven't added anything yet. Explore our VietGAP dragon fruit products and add them to your cart!",
+    "viewProducts": "View products",
+    "toastOrderCreated": "Order created. Order code: {code}",
+    "toastCartCleared": "Cart cleared.",
+    "toastItemRemoved": "Removed from cart."
+  },
+  "about": {
+    "heroEyebrow": "Pitaya Farm · Binh Thuan",
+    "heroTitle1": "The Soul of",
+    "heroTitle2": "Vietnamese Produce",
+    "heroSubtitle": "More than just a fruit — it is the crystallization of sun, wind, love for the motherland and over 12 years of dedication.",
+    "viewProducts": "View products",
+    "ourStoryLink": "Our story ↓",
+    "stat1": "Hectares cultivated",
+    "stat2": "Years of experience",
+    "stat3": "Grade 1 produce",
+    "stat4": "Export markets",
+    "storyEyebrow": "Our story",
+    "storyTitle": "From Mother Earth to Your Table",
+    "storySubtitle": "Every dragon fruit is a journey — hover over a card to read more.",
+    "hoverHint": "Hover to read more →",
+    "story1Title": "Source Region",
+    "story1Short": "Located in sunny Binh Thuan province, with the ideal climate and soil for dragon fruit.",
+    "story1Full": "Located in sunny Binh Thuan, with ideal climate and soil for dragon fruit. Across more than 50 hectares we manage a closed process from seedling selection to harvest, ensuring every fruit carries the signature flavor of this land.",
+    "story2Title": "Organic Farming",
+    "story2Short": "Strict farming standards with minimal chemical fertilizers and pesticides.",
+    "story2Full": "We apply strict farming standards that minimize chemical fertilizers and pesticides. All irrigation water is filtered and an automatic drip system conserves resources while providing exactly the nutrients needed at each growth stage.",
+    "story3Title": "Export Quality",
+    "story3Short": "Carefully selected, meeting the size and sugar standards of demanding markets.",
+    "story3Full": "Products are meticulously selected to meet the size and sugar standards of the most demanding markets: Europe, Japan and the USA. The grade-1 ratio is consistently above 90%, verified by independent international organizations.",
+    "qualityEyebrow": "Product & Quality",
+    "qualityTitle": "Key Characteristics",
+    "quality1Label": "Brix sweetness 18–22°",
+    "quality1Desc": "Naturally sweet, no preservatives",
+    "quality2Label": "Pesticide-free",
+    "quality2Desc": "Organic farming under GAP standards",
+    "quality3Label": "Traceability",
+    "quality3Desc": "QR code per batch, 100% transparent",
+    "quality4Label": "Harvested at peak ripeness",
+    "quality4Desc": "Precisely controlled harvest timing",
+    "certEyebrow": "Quality commitment",
+    "certTitle": "International Certifications",
+    "certSubtitle": "Hover over each badge to see details.",
+    "cert1Sub": "Issued 2023",
+    "cert1Detail": "Good agricultural practice standard in Vietnam — ensuring food safety, traceability and environmental protection.",
+    "cert2Sub": "Issued 2022",
+    "cert2Detail": "Global standard for farm management, food safety and traceability. Required for export to the EU and Japan.",
+    "cert3Sub": "Issued 2023",
+    "cert3Detail": "Hazard Analysis and Critical Control Points system for processing — minimizing food safety risk at every stage.",
+    "cert4Sub": "Issued 2024",
+    "cert4Detail": "International food safety management system standard, integrating HACCP principles and full quality management requirements.",
+    "ctaTitle": "Ready to order wholesale?",
+    "ctaSubtitle": "Best prices at every volume tier. Nationwide delivery and export.",
+    "ctaPrimary": "View wholesale pricing",
+    "ctaSecondary": "Contact us"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "titlePrefix": "Get in Touch with",
+    "titleHighlight": "Pitaya",
+    "subtitle": "Questions about wholesale pricing or product quality? Our team replies within <b>15 minutes</b>.",
+    "shopInfoTitle": "Dealer information",
+    "quickConnect": "Quick connect",
+    "infoAddressLabel": "Farm address",
+    "infoAddressValue": "123 Thanh Long Street, Ham Thuan Nam, Binh Thuan",
+    "infoHotlineLabel": "Wholesale hotline",
+    "infoHotlineValue": "090 123 4567",
+    "infoEmailLabel": "Contact email",
+    "infoEmailValue": "lienhe@pitaya.vn",
+    "infoHoursLabel": "Working hours",
+    "infoHoursValue": "07:00 – 21:00 · Monday – Sunday",
+    "mapLocation": "Ham Thuan Nam, Binh Thuan",
+    "openGoogleMaps": "Open in Google Maps ↗",
+    "interestRetail": "Retail dragon fruit",
+    "interestWholesale": "Register as wholesale dealer",
+    "interestExport": "Export partnership",
+    "interestQuality": "Quality feedback",
+    "interestOther": "Other",
+    "formTitle": "Leave us a message",
+    "nameLabel": "Full name",
+    "namePlaceholder": "Your full name",
+    "phoneLabel": "Phone number",
+    "phonePlaceholder": "090 123 4567",
+    "interestLabel": "What are you interested in?",
+    "messageLabel": "Message",
+    "messagePlaceholder": "What you need help with, expected quantity, delivery area...",
+    "submit": "SEND MESSAGE",
+    "submitting": "Sending...",
+    "privacyNote": "Your information is kept strictly private. No spam.",
+    "errorName": "Please enter your full name.",
+    "errorPhone": "Please enter your phone number.",
+    "errorMessage": "Please enter a message.",
+    "successTitle": "Message received!",
+    "successDescription": "Thanks for reaching out. The Pitaya team will reply within<b>15 minutes</b>.",
+    "sendAnother": "Send another message"
+  },
+  "auth": {
+    "login": {
+      "tagline": "Thanh Long dealer management system",
+      "title": "Welcome back",
+      "description": "Enter your credentials to continue",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in...",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "registerNow": "Register now",
+      "toastSuccess": "Signed in successfully!",
+      "toastError": "Incorrect username or password.",
+      "copyright": "© 2025 PITAYA. All rights reserved."
+    },
+    "register": {
+      "tagline": "Thanh Long dealer management system",
+      "title": "Create an account",
+      "description": "Fill in the details below to register",
+      "displayNameLabel": "Full name",
+      "displayNamePlaceholder": "John Doe",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone number",
+      "optional": "(optional)",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "At least 6 characters",
+      "confirmPasswordLabel": "Confirm password",
+      "confirmPasswordPlaceholder": "Re-enter password",
+      "submit": "Register",
+      "submitting": "Registering...",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Sign in",
+      "toastSuccess": "Registration successful! Welcome to PITAYA.",
+      "toastError": "Registration failed. Please try again.",
+      "copyright": "© 2025 PITAYA. All rights reserved."
+    },
+    "forgotPassword": {
+      "tagline": "Thanh Long dealer management system",
+      "requestTitle": "Forgot password",
+      "requestDescription": "Enter your account email. We'll send an OTP to reset your password.",
+      "emailLabel": "Email",
+      "sendOtp": "Send OTP",
+      "sendingOtp": "Sending OTP...",
+      "backToLogin": "Back to sign in",
+      "otpSentToast": "An OTP has been sent to your email.",
+      "otpErrorToast": "Unable to send OTP. Please try again.",
+      "resetTitle": "Reset password",
+      "resetDescriptionPrefix": "Enter the OTP sent to",
+      "otpLabel": "OTP code",
+      "otpPlaceholder": "Enter OTP",
+      "newPasswordLabel": "New password",
+      "newPasswordPlaceholder": "At least 6 characters",
+      "confirmPasswordLabel": "Confirm new password",
+      "confirmPasswordPlaceholder": "Re-enter password",
+      "resetSubmit": "Reset password",
+      "resetting": "Resetting...",
+      "otpInvalidToast": "OTP is invalid or has expired.",
+      "resetSuccessToast": "Password has been reset successfully!",
+      "doneTitle": "Reset successful!",
+      "doneDescription": "Your password has been updated.",
+      "doneHelper": "You can now sign in with your new password.",
+      "loginNow": "Sign in now",
+      "copyright": "© 2025 PITAYA. All rights reserved."
+    }
+  },
+  "account": {
+    "profile": {
+      "title": "My profile",
+      "refresh": "Refresh",
+      "errorBanner": "Unable to load data from the server. Showing cached data.",
+      "email": "Email",
+      "role": "Role",
+      "roleAdmin": "Administrator",
+      "roleCustomer": "Customer",
+      "accountId": "Account ID",
+      "changePassword": "Change password",
+      "backToShop": "← Back to shop",
+      "copyright": "© 2025 PITAYA. All rights reserved."
+    },
+    "changePassword": {
+      "title": "Change password",
+      "description": "Update your account password",
+      "accountLabel": "Account",
+      "currentPasswordLabel": "Current password",
+      "newPasswordLabel": "New password",
+      "newPasswordPlaceholder": "At least 6 characters",
+      "confirmPasswordLabel": "Confirm new password",
+      "confirmPasswordPlaceholder": "Re-enter new password",
+      "submit": "Change password",
+      "submitting": "Updating...",
+      "backToShop": "Back to shop",
+      "toastSuccess": "Password changed successfully!",
+      "toastError": "Failed to change password. Please check your current password.",
+      "doneTitle": "Password changed successfully",
+      "doneDescription": "Your password has been updated.",
+      "doneAccountPrefix": "Account",
+      "doneAccountSuffix": "has had its password updated.",
+      "copyright": "© 2025 PITAYA. All rights reserved."
+    }
+  },
+  "admin": {
+    "layout": {
+      "brand": {
+        "tagline": "Thanh Long Admin",
+        "mobileTitle": "Admin"
+      },
+      "nav": {
+        "dashboard": "Dashboard",
+        "orders": "Orders",
+        "inventory": "Inventory",
+        "products": "Products",
+        "customers": "Customers"
+      },
+      "chat": {
+        "newMessageFrom": "New message from {sender}",
+        "newMessagesCount": "{count} new messages"
+      },
+      "toast": {
+        "loggedOut": "Logged out."
+      },
+      "user": {
+        "fallback": "Administrator"
+      },
+      "action": {
+        "logout": "Log out"
+      }
+    },
+    "dashboard": {
+      "eyebrow": "Overview",
+      "title": "Dashboard",
+      "subtitle": "Updated on {date}",
+      "stats": {
+        "ordersToday": "Orders today",
+        "revenueToday": "Revenue today",
+        "pendingOrders": "Pending orders",
+        "totalOrders": "Total orders"
+      },
+      "recentOrders": {
+        "title": "Recent orders",
+        "viewAll": "View all",
+        "empty": "No orders yet.",
+        "customerLine": "{name} • {count} items"
+      },
+      "quick": {
+        "title": "Quick actions",
+        "pendingOrders": {
+          "label": "Orders pending confirmation",
+          "action": "Handle now"
+        },
+        "expiringBatches": {
+          "label": "Expiring batches",
+          "action": "View inventory"
+        },
+        "fefoInventory": {
+          "label": "FEFO inventory",
+          "action": "Open list"
+        },
+        "manageOrders": {
+          "label": "Manage orders",
+          "action": "Go to orders"
+        }
+      }
+    },
+    "orders": {
+      "list": {
+        "eyebrow": "Orders",
+        "title": {
+          "prefix": "Manage",
+          "highlight": "orders"
+        },
+        "totalCount": "{count} orders total",
+        "action": {
+          "refresh": "Refresh",
+          "confirm": "Confirm",
+          "adjust": "Adjust"
+        },
+        "filter": {
+          "allStatuses": "All statuses"
+        },
+        "status": {
+          "Submitted": "Pending",
+          "Confirmed": "Confirmed",
+          "Picking": "Picking",
+          "Adjusted": "Adjusted",
+          "Delivering": "Delivering",
+          "Delivered": "Delivered",
+          "Cancelled": "Cancelled"
+        },
+        "search": {
+          "placeholder": "Search by order code or customer..."
+        },
+        "error": {
+          "loadFailed": "Failed to load orders."
+        },
+        "table": {
+          "orderCode": "Order code",
+          "customer": "Customer",
+          "itemCount": "Items",
+          "total": "Total",
+          "status": "Status",
+          "createdAt": "Created at",
+          "actions": "Actions",
+          "itemCountValue": "{count} items"
+        },
+        "empty": {
+          "noMatch": "No matching orders."
+        },
+        "toast": {
+          "confirmed": "Order confirmed."
+        },
+        "pagination": {
+          "showing": "Showing {shown} of {total} orders"
+        }
+      },
+      "detail": {
+        "action": {
+          "back": "Back",
+          "adjust": "Adjust order"
+        },
+        "notFound": {
+          "title": "Order not found",
+          "description": "This order does not exist or has been removed."
+        },
+        "card": {
+          "orderTitle": "Order {code}"
+        },
+        "field": {
+          "orderCode": "Order code",
+          "customer": "Customer",
+          "createdAt": "Created at",
+          "notes": "Notes",
+          "totalPayment": "Total payment"
+        },
+        "items": {
+          "title": "Order items",
+          "empty": "This order has no items.",
+          "product": "Product",
+          "unitPrice": "Unit price",
+          "quantity": "Quantity",
+          "lineTotal": "Line total",
+          "productFallback": "Product",
+          "grandTotal": "Grand total"
+        }
+      },
+      "adjust": {
+        "toast": {
+          "success": "Order adjustment saved.",
+          "successDescription": "The order has been updated successfully.",
+          "errorFallback": "Failed to save adjustment."
+        },
+        "notFound": "Order not found.",
+        "action": {
+          "back": "Back",
+          "cancel": "Cancel",
+          "previewSave": "Preview & save"
+        },
+        "eyebrow": "Adjust order",
+        "title": {
+          "prefix": "Adjust",
+          "highlight": "order"
+        },
+        "info": {
+          "userId": "Customer ID",
+          "originalTotal": "Original total",
+          "createdAt": "Created at",
+          "notes": "Order notes"
+        },
+        "idempotency": {
+          "label": "Idempotency key",
+          "hint": "Auto-generated to prevent duplicates."
+        },
+        "table": {
+          "title": "Order items",
+          "product": "Product",
+          "orderedQty": "Ordered",
+          "actualQty": "Actual",
+          "unitPrice": "Unit price",
+          "originalTotal": "Original",
+          "adjustedTotal": "Adjusted",
+          "difference": "Difference",
+          "grandTotal": "Total"
+        },
+        "diff": {
+          "unchanged": "Unchanged",
+          "noChange": "No change"
+        },
+        "summary": {
+          "original": "Original total",
+          "adjusted": "Adjusted total",
+          "customerOwes": "Customer owes extra",
+          "customerRefund": "Refund to customer"
+        },
+        "note": {
+          "label": "Adjustment note",
+          "placeholder": "Reason for adjustment..."
+        },
+        "warning": {
+          "noChanges": "No changes yet."
+        },
+        "dialog": {
+          "title": "Confirm adjustment",
+          "description": "Please review before saving.",
+          "differenceLabel": "Difference",
+          "notesLabel": "Notes",
+          "review": "Back to edit",
+          "saving": "Saving...",
+          "confirmSave": "Confirm save"
+        }
+      }
+    },
+    "products": {
+      "eyebrow": "Products",
+      "title": {
+        "prefix": "Manage",
+        "highlight": "products"
+      },
+      "totalCount": "{count} products total",
+      "action": {
+        "refresh": "Refresh",
+        "add": "Add product",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "deleting": "Deleting...",
+        "create": "Create",
+        "creating": "Creating...",
+        "save": "Save",
+        "saving": "Saving...",
+        "edit": "Edit",
+        "updatePrice": "Update price"
+      },
+      "search": {
+        "placeholder": "Search by name or SKU..."
+      },
+      "error": {
+        "loadFailed": "Failed to load products."
+      },
+      "table": {
+        "nameSku": "Name / SKU",
+        "unit": "Unit",
+        "retailPrice": "Retail price",
+        "status": "Status",
+        "createdAt": "Created at",
+        "actions": "Actions"
+      },
+      "empty": {
+        "noProducts": "No products."
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "delete": {
+        "title": "Delete product",
+        "description": "Are you sure you want to delete \"{name}\"?"
+      },
+      "create": {
+        "title": "Create new product",
+        "description": "Enter the new product details."
+      },
+      "edit": {
+        "title": "Edit product",
+        "description": "Update the product information."
+      },
+      "form": {
+        "nameLabel": "Product name",
+        "namePlaceholder": "e.g. Red dragon fruit",
+        "descLabel": "Description",
+        "optional": "(optional)",
+        "skuLabel": "SKU",
+        "retailPriceLabel": "Retail price (₫)",
+        "unitLabel": "Unit",
+        "activeLabel": "Active"
+      },
+      "prices": {
+        "title": "Update price tiers",
+        "description": "Manage wholesale tiers for \"{name}\".",
+        "wholesaleLabel": "Wholesale tiers",
+        "addTier": "Add tier",
+        "minQtyPlaceholder": "Min quantity",
+        "unitPricePlaceholder": "Unit price",
+        "tierNamePlaceholder": "Tier name (e.g. Tier 1)",
+        "submit": "Save tiers"
+      },
+      "toast": {
+        "created": "Product created.",
+        "updated": "Product updated.",
+        "deleted": "Product deleted.",
+        "pricesUpdated": "Price tiers updated."
+      }
+    },
+    "inventory": {
+      "eyebrow": "Inventory",
+      "title": {
+        "prefix": "Manage",
+        "highlight": "FEFO inventory"
+      },
+      "subtitle": "Track batches by expiration date.",
+      "action": {
+        "refresh": "Refresh"
+      },
+      "stats": {
+        "totalBatches": "Total batches",
+        "totalQuantity": "Total qty: {qty}",
+        "expired": "Expired",
+        "expiredHint": "Needs immediate action",
+        "expiring": "Expiring soon",
+        "expiringHint": "Prioritize selling",
+        "fresh": "Fresh",
+        "freshHint": "Plenty of time"
+      },
+      "timeline": {
+        "heading": "FEFO timeline",
+        "empty": "No batches yet."
+      },
+      "batch": {
+        "received": "Received:",
+        "expires": "Expires:",
+        "supplier": "Supplier: {name}",
+        "actionDispose": "Dispose now",
+        "actionPrioritize": "Prioritize"
+      },
+      "legend": {
+        "title": "Legend:",
+        "expired": "Expired",
+        "expiring": "Expiring",
+        "fresh": "Fresh"
+      }
+    },
+    "customers": {
+      "list": {
+        "eyebrow": "Customers",
+        "title": {
+          "prefix": "Manage",
+          "highlight": "customers"
+        },
+        "totalCount": "{count} customers total",
+        "action": {
+          "refresh": "Refresh"
+        },
+        "stats": {
+          "total": "Total",
+          "active": "Active",
+          "inactive": "Inactive",
+          "wholesaler": "Wholesalers"
+        },
+        "search": {
+          "placeholder": "Search by name, email, phone..."
+        },
+        "roleFilter": {
+          "All": "All",
+          "Customer": "Retail",
+          "Wholesaler": "Wholesale",
+          "Admin": "Admin"
+        },
+        "error": {
+          "loadFailed": "Failed to load customers."
+        },
+        "table": {
+          "customer": "Customer",
+          "phone": "Phone",
+          "role": "Role",
+          "creditLimit": "Credit limit",
+          "status": "Status",
+          "createdAt": "Created at",
+          "detail": "Detail"
+        },
+        "empty": {
+          "noMatch": "No matching customers."
+        },
+        "role": {
+          "Customer": "Retail",
+          "Wholesaler": "Wholesale",
+          "Admin": "Admin"
+        },
+        "status": {
+          "active": "Active",
+          "inactive": "Inactive"
+        },
+        "pagination": {
+          "showing": "Showing {shown} of {total} customers"
+        }
+      },
+      "detail": {
+        "action": {
+          "back": "Back",
+          "cancel": "Cancel",
+          "saving": "Saving...",
+          "update": "Update",
+          "confirm": "Confirm",
+          "resetting": "Resetting..."
+        },
+        "notFound": {
+          "title": "Customer not found",
+          "description": "This customer does not exist or has been removed."
+        },
+        "info": {
+          "email": "Email",
+          "phone": "Phone",
+          "role": "Role",
+          "creditLimit": "Credit limit",
+          "createdAt": "Created at",
+          "phoneNotSet": "Not set",
+          "creditNotSet": "Not set"
+        },
+        "status": {
+          "active": "Active",
+          "inactive": "Inactive"
+        },
+        "role": {
+          "Customer": "Retail",
+          "Wholesaler": "Wholesale",
+          "Admin": "Admin"
+        },
+        "actions": {
+          "title": "Actions",
+          "changeRole": "Change role",
+          "disableOrCredit": "Disable / update credit",
+          "enableOrCredit": "Enable / update credit",
+          "resetPassword": "Reset password"
+        },
+        "roleDialog": {
+          "title": "Change role",
+          "accountLabel": "Account:"
+        },
+        "statusDialog": {
+          "title": "Status & credit limit",
+          "accountLabel": "Account:",
+          "accountStatusLabel": "Account status",
+          "active": "Active",
+          "inactive": "Disabled",
+          "creditLabel": "Credit limit (₫)",
+          "creditPlaceholder": "e.g. 50000000",
+          "creditHint": "Leave empty for no limit.",
+          "saveChanges": "Save changes"
+        },
+        "passwordDialog": {
+          "title": "Reset password",
+          "descriptionPrefix": "Set a new password for",
+          "descriptionSuffix": " without needing the old password."
+        },
+        "password": {
+          "newLabel": "New password",
+          "newPlaceholder": "Minimum 6 characters",
+          "confirmLabel": "Confirm password",
+          "confirmPlaceholder": "Re-enter password",
+          "mismatch": "Passwords do not match"
+        },
+        "toast": {
+          "roleUpdated": "Role updated.",
+          "statusUpdated": "Account status updated.",
+          "passwordReset": "Password reset successful."
+        }
+      }
+    }
+  },
+  "language": {
+    "switch": "Language",
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "validation": {
+    "emailRequired": "Please enter your email",
+    "emailInvalid": "Invalid email address",
+    "passwordRequired": "Please enter your password",
+    "passwordMinLength": "Password must be at least {min} characters",
+    "passwordMismatch": "Passwords do not match",
+    "displayNameRequired": "Please enter your full name",
+    "currentPasswordRequired": "Please enter your current password",
+    "newPasswordSame": "New password must be different from current password",
+    "otpRequired": "Please enter OTP code"
+  }
+}

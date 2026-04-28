@@ -1,17 +1,18 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 const PRODUCTS = [
   {
     id: 1,
-    name: "Thanh Long Ruột Đỏ L1",
+    name: "products.p1.name",
     price: "12.000đ",
     unit: "/kg",
-    badge: "Lô mới",
+    badge: "products.p1.badge",
     badgeColor: "bg-cactus-100 text-cactus-700",
-    origin: "Bình Thuận",
+    origin: "products.p1.origin",
     pattern: "red" as const,
     skin: "#e8196f",
     flesh: "#ff6ba8",
@@ -19,12 +20,12 @@ const PRODUCTS = [
   },
   {
     id: 2,
-    name: "Thanh Long Ruột Đỏ L2",
+    name: "products.p2.name",
     price: "9.500đ",
     unit: "/kg",
-    badge: "Hot",
+    badge: "products.p2.badge",
     badgeColor: "bg-pitaya-100 text-pitaya-700",
-    origin: "Long An",
+    origin: "products.p2.origin",
     pattern: "red" as const,
     skin: "#db2476",
     flesh: "#f48ab8",
@@ -32,12 +33,12 @@ const PRODUCTS = [
   },
   {
     id: 3,
-    name: "Thanh Long Ruột Trắng",
+    name: "products.p3.name",
     price: "8.000đ",
     unit: "/kg",
-    badge: "Xuất khẩu",
+    badge: "products.p3.badge",
     badgeColor: "bg-blue-50 text-blue-600",
-    origin: "Bình Thuận",
+    origin: "products.p3.origin",
     pattern: "white" as const,
     skin: "#f43f89",
     flesh: "#fff",
@@ -45,12 +46,12 @@ const PRODUCTS = [
   },
   {
     id: 4,
-    name: "Thanh Long Xuất Khẩu A1",
+    name: "products.p4.name",
     price: "18.000đ",
     unit: "/kg",
-    badge: "Premium",
+    badge: "products.p4.badge",
     badgeColor: "bg-amber-100 text-amber-700",
-    origin: "VietGAP",
+    origin: "products.p4.origin",
     pattern: "red" as const,
     skin: "#c81d6a",
     flesh: "#f06ba0",
@@ -58,12 +59,12 @@ const PRODUCTS = [
   },
   {
     id: 5,
-    name: "Hàng Dạt Thanh Long",
+    name: "products.p5.name",
     price: "5.000đ",
     unit: "/kg",
-    badge: "Giá tốt",
+    badge: "products.p5.badge",
     badgeColor: "bg-orange-100 text-orange-700",
-    origin: "Mix vườn",
+    origin: "products.p5.origin",
     pattern: "white" as const,
     skin: "#f97316",
     flesh: "#fed7aa",
@@ -114,6 +115,7 @@ function ProductMacro({ skin, flesh, inner, pattern }: {
 }
 
 export default function FeaturedProducts() {
+  const t = useTranslations("home.featured");
   const scrollRef = useRef<HTMLDivElement>(null);
   const scroll = (dir: "left" | "right") => {
     if (!scrollRef.current) return;
@@ -126,15 +128,15 @@ export default function FeaturedProducts() {
         {/* Header */}
         <div className="flex items-center justify-between mb-6 sm:mb-8 gap-4">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-pitaya-500 mb-0.5">Hôm nay</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-dragon-dark">Sản phẩm nổi bật</h2>
-            <p className="text-slate-400 text-sm mt-0.5">Thanh long tươi ngon, giá sỉ ưu đãi</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-pitaya-500 mb-0.5">{t("eyebrow")}</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-dragon-dark">{t("title")}</h2>
+            <p className="text-slate-400 text-sm mt-0.5">{t("subtitle")}</p>
           </div>
           <div className="flex gap-2 shrink-0">
             {(["left", "right"] as const).map((dir) => (
               <button
                 key={dir}
-                aria-label={dir === "left" ? "Cuộn trái" : "Cuộn phải"}
+                aria-label={dir === "left" ? t("aria.scrollLeft") : t("aria.scrollRight")}
                 onClick={() => scroll(dir)}
                 className="w-9 h-9 rounded-full border border-slate-200 bg-white hover:bg-pitaya-50 hover:border-pitaya-300 transition-all flex items-center justify-center shadow-sm"
               >
@@ -181,12 +183,12 @@ export default function FeaturedProducts() {
                 {/* Badge + Origin */}
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className={`${p.badgeColor} px-2 py-0.5 rounded-full text-xs font-bold`}>
-                    {p.badge}
+                    {t(p.badge)}
                   </span>
-                  <span className="text-xs text-slate-400">{p.origin}</span>
+                  <span className="text-xs text-slate-400">{t(p.origin)}</span>
                 </div>
 
-                <h3 className="font-bold text-dragon-dark text-sm leading-snug">{p.name}</h3>
+                <h3 className="font-bold text-dragon-dark text-sm leading-snug">{t(p.name)}</h3>
 
                 {/* Price – highlighted pitaya style */}
                 <div className="mt-auto">
@@ -194,7 +196,7 @@ export default function FeaturedProducts() {
                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z" />
                     </svg>
-                    Giá sỉ từ
+                    {t("priceFrom")}
                   </span>
                   <p className="text-2xl font-black text-pitaya-600 leading-none">
                     {p.price}
@@ -214,7 +216,7 @@ export default function FeaturedProducts() {
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
-                  Thêm nhanh vào giỏ
+                  {t("quickAdd")}
                 </Link>
               </div>
             </div>
@@ -227,7 +229,7 @@ export default function FeaturedProducts() {
             href="/shop"
             className="inline-flex items-center gap-2 text-sm font-semibold text-pitaya-600 hover:text-pitaya-700 transition-colors"
           >
-            Xem toàn bộ sản phẩm
+            {t("viewAll")}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
